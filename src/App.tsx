@@ -1,7 +1,7 @@
-import React from "react";
+import Home from "./views/Home";
 
 function App() {
-  return <div>Prueba</div>;
+  return <Home />;
 }
 
 export default App;
