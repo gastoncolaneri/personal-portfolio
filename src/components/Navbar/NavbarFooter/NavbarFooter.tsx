@@ -11,12 +11,14 @@ const NavbarFooter = () => {
       <NavbarFooterIcon
         title="LinkedIn"
         href={spanishData?.socialNetworks?.linkedin}
+        iconClassName="icon__footer"
       >
         <LinkedInIcon />
       </NavbarFooterIcon>
       <NavbarFooterIcon
         title="GitHub"
         href={spanishData?.socialNetworks?.github}
+        iconClassName="icon__footer"
       >
         <GitHubIcon />
       </NavbarFooterIcon>
