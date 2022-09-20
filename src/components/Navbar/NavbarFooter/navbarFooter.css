@@ -1,0 +1,13 @@
+.navbar__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.icon__footer {
+  color: #fff !important;
+  opacity: 0.7 !important;
+}
+.icon__footer:hover {
+  opacity: 1 !important;
+  color: var(--AQUA-GREEN) !important;
+}

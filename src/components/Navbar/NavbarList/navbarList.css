@@ -1,0 +1,17 @@
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__item {
+  opacity: 0.7;
+  margin-bottom: 30px !important;
+  font-weight: 500;
+}
+
+.navbar__item:hover {
+  opacity: 1;
+  color: var(--AQUA-GREEN);
+}
