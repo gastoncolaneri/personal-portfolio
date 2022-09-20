@@ -1,0 +1,15 @@
+.image__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.avatar__navbar {
+  border: 6px solid var(--LIGHT-GREY);
+}
+
+.fullname__navbar {
+  font-weight: 600;
+  color: var(--WHITE);
+  opacity: 0.9;
+}
