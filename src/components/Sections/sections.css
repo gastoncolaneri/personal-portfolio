@@ -1,0 +1,11 @@
+.sections {
+  min-height: 700px;
+  padding: 100px 50px 50px 50px;
+}
+.background-1 {
+  background-color: #212529;
+}
+
+.background-2 {
+  background-color: #343a40;
+}
