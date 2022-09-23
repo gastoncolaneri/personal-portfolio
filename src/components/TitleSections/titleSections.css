@@ -1,0 +1,23 @@
+.mainTitle {
+  text-transform: uppercase;
+  color: var(--TEXT-2);
+  opacity: 0.1;
+  font-weight: 600 !important;
+  font-size: 9rem !important;
+}
+
+.backgroundTitle {
+  position: absolute;
+  color: var(--TEXT-4);
+  font-weight: 600 !important;
+  opacity: 0.9;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  font-size: 2.2rem !important;
+  padding-bottom: 60px;
+  background-image: linear-gradient(var(--AQUA-GREEN), var(--AQUA-GREEN));
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 8% 3px;
+}

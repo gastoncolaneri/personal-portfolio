@@ -1,19 +1,27 @@
+import { HashLink as Link } from "react-router-hash-link";
+import { BrowserRouter as Router } from "react-router-dom";
 import { spanishData } from "../../../data/data";
-import Link from "@mui/material/Link";
 
 import "./navbarList.css";
 
 const NavbarList = () => {
   return (
-    <div className="navbar__list">
-      {spanishData?.navList.map((item) => {
-        return (
-          <Link href="#" underline="none" className="navbar__item"  color="#fff" >
-            {item}
-          </Link>
-        );
-      })}
-    </div>
+    <Router>
+      <nav className="navbar__list">
+        {spanishData?.navList.map((item) => {
+          return (
+            <Link
+              to={`#${item?.id}`}
+              className="navbar__item"
+              smooth
+              key={item?.id}
+            >
+              {item?.title}
+            </Link>
+          );
+        })}
+      </nav>
+    </Router>
   );
 };
 

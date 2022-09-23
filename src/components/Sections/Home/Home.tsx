@@ -1,8 +1,11 @@
-import { Typography, CardMedia } from "@mui/material";
+import { CardMedia, Typography } from "@mui/material";
+import { IListItems } from "../../../interfaces/navbar/listItems";
 
-const Home = () => {
+import "./home.css";
+
+const Home = ({ id }: IListItems) => {
   return (
-    <div>
+    <div id={id} className="container">
       <CardMedia
         component="img"
         image={require("../../../assets/backgroundGif.gif")}
@@ -12,13 +15,17 @@ const Home = () => {
           filter: "brightness(0.4) contrast(100%) grayscale(50%)",
         }}
       />
-      <Typography
-        gutterBottom
-        variant="h5"
-        sx={{ position: "absolute", color: "#fff", top: "50%", left: "50%" }}
-      >
-        Bienvenido!
-      </Typography>
+      <div className="text__container">
+        <Typography variant="h4" className="text">
+          Bienvenido!
+        </Typography>
+        <Typography variant="h2" className="text">
+          Mi nombre es Gastón Colaneri
+        </Typography>
+        <Typography variant="h4" className="text">
+          Soy desarrollador de software
+        </Typography>
+      </div>
     </div>
   );
 };

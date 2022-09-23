@@ -6,9 +6,8 @@ const NavbarImage = () => {
   return (
     <div className="image__container">
       <Avatar
-        alt="Remy Sharp"
+        alt="Gastón Colaneri"
         src={require("../../../assets/foto.jpg")}
-        sx={{ width: 170, height: 170 }}
         className="avatar__navbar"
       />
       <Typography variant="h6" mt={1} className="fullname__navbar">

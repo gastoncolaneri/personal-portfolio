@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text__container {
+  position: absolute;
+  background-color: var(--BACKGROUND-3);
+  padding: 50px;
+  border-radius: 8px;
+  color: var(--TEXT-4);
+}
+.text {
+  margin-bottom: 20px !important;
+  color: var(--TEXT-4);
+  opacity: 1;
+  font-weight: 200 !important;
+}

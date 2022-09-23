@@ -1,8 +1,13 @@
 :root {
-  --DARK-GREY: #111418;
-  --LIGHT-GREY: #343a40;
-  --DEFAULT-GREY: #c0c1c2;
-  --FADED-GREY: #6c757d;
+  --BACKGROUND-0: #111418;
+  --BACKGROUND-1: #212529;
+  --BACKGROUND-2: #343a40;
+  --BACKGROUND-3: #1a1b1c99;
+  --TEXT-0: #282d31;
+  --TEXT-1: #3e4449;
+  --TEXT-2: #6c757d;
+  --TEXT-3: #909294;
+  --TEXT-4: #fffff3;
   --AQUA-GREEN: #20c997;
   --WHITE: #ffffff;
 }

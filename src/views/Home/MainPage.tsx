@@ -5,6 +5,7 @@ import {
   Home,
   Portfolio,
   Resume,
+  Footer,
 } from "../../components/Sections";
 
 import "./mainPage.css";
@@ -16,11 +17,12 @@ const MainPage = () => {
         <Navbar />
       </div>
       <div className="right__block">
-        <Home />
-        <AboutMe />
-        <Resume />
-        <Portfolio />
-        <Contact />
+        <Home id="homeItem" />
+        <AboutMe id="aboutMeItem" />
+        <Resume id="resumeItem" />
+        <Portfolio id="portfolioItem" />
+        <Contact id="contactItem" />
+        <Footer />
       </div>
     </div>
   );
