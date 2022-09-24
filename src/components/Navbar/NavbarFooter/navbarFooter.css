@@ -4,9 +4,8 @@
 }
 
 .icon__footer {
-  color: #fff !important;
+  color: var(--TEXT-5) !important;
 }
 .icon__footer:hover {
-  opacity: 1 !important;
-  color: var(--AQUA-GREEN) !important;
+  color: var(--AQUA-GREEN-1) !important;
 }

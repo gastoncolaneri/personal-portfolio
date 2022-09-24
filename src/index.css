@@ -8,7 +8,9 @@
   --TEXT-2: #6c757d;
   --TEXT-3: #909294;
   --TEXT-4: #fffff3;
-  --AQUA-GREEN: #20c997;
+  --TEXT-5: #fffff3ab;
+  --AQUA-GREEN-1: #20c997;
+  --AQUA-GREEN-2: #198f6c;
   --WHITE: #ffffff;
 }
 body {
@@ -18,6 +20,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+*::selection {
+  background: var(--AQUA-GREEN-1);
+  color: var(--TEXT-4);
+}
+
+*::-moz-selection {
+  background: var(--AQUA-GREEN-1);
+  color: var(--TEXT-4);
 }
 
 code {

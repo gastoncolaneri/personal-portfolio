@@ -17,11 +17,11 @@ const MainPage = () => {
         <Navbar />
       </div>
       <div className="right__block">
-        <Home id="homeItem" />
-        <AboutMe id="aboutMeItem" />
-        <Resume id="resumeItem" />
-        <Portfolio id="portfolioItem" />
-        <Contact id="contactItem" />
+        <Home id="home" />
+        <AboutMe id="about" />
+        <Resume id="resume" />
+        <Portfolio id="portfolio" />
+        <Contact id="contact" />
         <Footer />
       </div>
     </div>
