@@ -1,8 +1,8 @@
-import { Button, Divider, Typography } from "@mui/material";
-import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import { Divider, Typography } from "@mui/material";
 import { spanishData } from "../../../data/data";
 import { IListItems } from "../../../interfaces/navbar/listItems";
 import TitleSections from "../../TitleSections/TitleSections";
+import DownloadButton from "../../DownloadButton";
 
 import "../sections.css";
 import "./about.css";
@@ -16,27 +16,18 @@ const AboutMe = ({ id }: IListItems) => {
       />
       <div className="about__container">
         <div className="about__text">
-          <Typography
-            variant="h4"
-            style={{ fontWeight: 700, color: "#fffff3", marginBottom: "20px" }}
-          >
+          <Typography variant="h4" className="mb-20 text-grey">
             Soy
-            <span style={{ color: "#20c997" }}> Gastón Colaneri</span>, un
+            <span className="text-green"> Gastón Colaneri</span>, un
             desarrollador de software.
           </Typography>
-          <Typography
-            variant="h6"
-            style={{
-              color: "#fffff3ab",
-              marginBottom: "20px",
-            }}
-          >
+          <Typography variant="h6" className="mb-20 text-grey">
             Me considero una persona responsable, entusiasta y comprometida.
             Debido a mi experiencia académica y laboral, he adquirido excelentes
             habilidades organizativas y puedo desempeñarme eficientemente tanto
             de forma individual como formando parte de un equipo.
           </Typography>
-          <Typography variant="h6" style={{ color: "#fffff3ab" }}>
+          <Typography variant="h6" className="text-grey">
             Me encanta aprender, disfruto superando desafíos y tengo un gran
             interés en seguir mejorando mis habilidades tecnológicas,
             aprendiendo y desarrollando mi carrera profesional como
@@ -44,56 +35,23 @@ const AboutMe = ({ id }: IListItems) => {
           </Typography>
         </div>
         <div className="info__container">
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              height: "100%",
-            }}
-          >
+          <div className="info__text">
             <div>
               {spanishData?.personalData.map((item, index) => {
                 return (
                   <>
-                    <div
-                      style={{
-                        display: "flex",
-                        color: "#fffff3ab",
-                      }}
-                    >
-                      <Typography
-                        variant="h6"
-                        style={{
-                          marginRight: "5px",
-                          fontWeight: 600,
-                        }}
-                      >
+                    <div className="d-flex text-grey">
+                      <Typography variant="h6" className="info__label">
                         {`${spanishData?.personalDataLabel[index]}:`}
                       </Typography>
                       <Typography variant="h6"> {item}</Typography>
                     </div>
-                    <Divider
-                      sx={{
-                        borderColor: "#3e4449",
-                        marginTop: "5px",
-                        marginBottom: "5px",
-                      }}
-                    />
+                    <Divider className="divider" />
                   </>
                 );
               })}
             </div>
-            <Button
-              variant="contained"
-              endIcon={<FileDownloadIcon />}
-              href={spanishData?.resumeDownloadLink?.link}
-              target="_blank"
-              download={spanishData?.resumeDownloadLink?.label}
-              className="download__button"
-            >
-              Descargar CV
-            </Button>
+            <DownloadButton />
           </div>
         </div>
       </div>

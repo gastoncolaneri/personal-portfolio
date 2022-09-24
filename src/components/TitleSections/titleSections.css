@@ -1,3 +1,9 @@
+.title__container {
+  justify-content: center;
+  position: relative;
+  display: flex;
+}
+
 .mainTitle {
   text-transform: uppercase;
   color: var(--TEXT-2);

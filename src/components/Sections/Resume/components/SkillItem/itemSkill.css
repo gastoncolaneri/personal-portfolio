@@ -1,0 +1,26 @@
+.item__container {
+  display: flex;
+  min-width: 48%;
+}
+.item-label__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
+  color: var(--TEXT-5);
+  font-weight: 700 !important;
+  margin-bottom: 10px;
+}
+
+.item__label {
+  font-weight: 700 !important;
+}
+
+.skill__status {
+  background-color: var(--TEXT-0) !important;
+  height: 8px !important;
+  border-radius: 8px !important;
+}
+.skill__status span {
+  background-color: var(--AQUA-GREEN-1) !important;
+}

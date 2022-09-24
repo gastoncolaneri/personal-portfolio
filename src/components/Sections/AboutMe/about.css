@@ -29,3 +29,21 @@
   background-color: var(--AQUA-GREEN-2) !important;
   transition: 0.5s;
 }
+
+.divider {
+  border-color: #3e4449 !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.info__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.info__label {
+  margin-right: 5px !important;
+  font-weight: 600 !important;
+}
