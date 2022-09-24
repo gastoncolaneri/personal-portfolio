@@ -6,15 +6,15 @@
 }
 
 .navbar__item {
-  opacity: 0.7;
   margin-bottom: 30px !important;
   font-weight: 500;
-  color: #fff;
+  color: #fffff3ab;
   cursor: pointer;
   text-decoration: none;
+  transition: 0.5s;
 }
 
 .navbar__item:hover {
-  opacity: 1;
-  color: var(--AQUA-GREEN);
+  color: var(--AQUA-GREEN-1);
+  transition: 0.5s;
 }
