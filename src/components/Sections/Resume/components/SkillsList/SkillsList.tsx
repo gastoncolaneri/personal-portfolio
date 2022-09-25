@@ -6,7 +6,7 @@ import "./skillsList.css";
 
 const SkillsList = ({ data }: ISkillsList) => {
   return (
-    <div>
+    <div className="mb-20">
       <Typography variant="h4" className="card__title mb-20">
         Habilidades
       </Typography>

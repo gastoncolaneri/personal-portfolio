@@ -14,18 +14,12 @@
   padding: 15px;
 }
 
-.download__button {
+.button__about {
   background-color: var(--AQUA-GREEN-1) !important;
   color: var(--TEXT-0);
-  font-weight: 700 !important;
-  transition: 0.5s;
-  max-width: 230px;
-  border-radius: 50px !important;
-  padding: 0.8rem 2.6rem !important;
-  align-self: center;
 }
 
-.download__button:hover {
+.button__about:hover {
   background-color: var(--AQUA-GREEN-2) !important;
   transition: 0.5s;
 }

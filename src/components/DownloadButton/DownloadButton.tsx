@@ -1,8 +1,11 @@
 import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { spanishData } from "../../data/data";
+import { IDownloadButton } from "../../interfaces";
 
-const DownloadButton = () => {
+import "./downloadButton.css";
+
+const DownloadButton = ({ customClassname }: IDownloadButton) => {
   return (
     <Button
       variant="contained"
@@ -10,7 +13,7 @@ const DownloadButton = () => {
       href={spanishData?.resumeDownloadLink?.link}
       target="_blank"
       download={spanishData?.resumeDownloadLink?.label}
-      className="download__button"
+      className={`download__button ${customClassname}`}
     >
       Descargar CV
     </Button>

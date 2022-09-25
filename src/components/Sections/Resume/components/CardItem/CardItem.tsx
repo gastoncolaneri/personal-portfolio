@@ -14,7 +14,7 @@ const CardItem = ({ data }: ICardItem) => {
                 {item?.dates?.start} - {item?.dates?.end}
               </div>
             </div>
-            <Typography variant="h5" className="name__item">
+            <Typography variant="h6" className="name__item">
               {item?.name}
             </Typography>
             <Typography className="place__item">

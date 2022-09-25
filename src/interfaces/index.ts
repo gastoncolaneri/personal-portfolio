@@ -10,3 +10,7 @@ export interface IResume {
   url: string;
   dates: IDates;
 }
+
+export interface IDownloadButton {
+  customClassname?: string;
+}

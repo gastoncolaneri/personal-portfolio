@@ -63,7 +63,7 @@ export const spanishData = {
       name: "Desarrollo web Full Stack con Java",
       place: "PoloTIC Misiones",
       url: "https://polotic.misiones.gob.ar/",
-      dates: { start: "Mar 2021", end: "JuL 2021" },
+      dates: { start: "Mar 2021", end: "Jul 2021" },
     },
     {
       name: "Full Stack - Python",
@@ -85,7 +85,7 @@ export const spanishData = {
       url: "https://pasiona.com/",
       description:
         "Desarrollo Frontend utilizando React.  Testing con Jest y React Testing Library.  Otras herramientas utilizadas: Redux - GraphQL - Postman - VS code - Azure DevOps",
-      dates: { start: "Sep 2022", end: "Act" },
+      dates: { start: "Sep 2022", end: "Actualidad" },
     },
     {
       name: "Desarrollador Frontend",

@@ -51,7 +51,7 @@ const AboutMe = ({ id }: IListItems) => {
                 );
               })}
             </div>
-            <DownloadButton />
+            <DownloadButton customClassname="button__about" />
           </div>
         </div>
       </div>

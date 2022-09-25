@@ -23,4 +23,5 @@
 }
 .skill__status span {
   background-color: var(--AQUA-GREEN-1) !important;
+  border-radius: 8px !important;
 }

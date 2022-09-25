@@ -1,5 +1,6 @@
 import { spanishData } from "../../../data/data";
 import { IListItems } from "../../../interfaces/navbar/listItems";
+import DownloadButton from "../../DownloadButton";
 import TitleSections from "../../TitleSections/TitleSections";
 import CardList from "./components/CardList";
 import SkillsList from "./components/SkillsList";
@@ -19,6 +20,7 @@ const Resume = ({ id }: IListItems) => {
           <CardList title="Experiencia laboral" data={spanishData?.jobs} />
         </div>
         <SkillsList data={spanishData?.skills} />
+        <DownloadButton customClassname="button__skills" />
       </div>
     </div>
   );
