@@ -1,0 +1,5 @@
+.skills__container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}

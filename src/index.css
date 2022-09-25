@@ -36,3 +36,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/** Global classes **/
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.text-grey {
+  color: var(--TEXT-5) !important;
+}
+
+.text-green {
+  color: var(--AQUA-GREEN-1);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}

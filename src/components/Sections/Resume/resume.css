@@ -1,0 +1,19 @@
+.resume__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button__skills {
+  background-color: var(--BACKGROUND-2) !important;
+  color: var(--TEXT-3) !important;
+  border: 2px solid var(--TEXT-3) !important;
+}
+
+.button__skills:hover {
+  background-color: var(--TEXT-3) !important;
+  color: var(--TEXT-4) !important;
+  transition: 0.5s;
+}

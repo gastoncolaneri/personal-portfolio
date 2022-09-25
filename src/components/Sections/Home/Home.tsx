@@ -9,20 +9,16 @@ const Home = ({ id }: IListItems) => {
       <CardMedia
         component="img"
         image={require("../../../assets/backgroundGif.gif")}
-        sx={{
-          width: "100%",
-          height: "100vh",
-          filter: "brightness(0.4) contrast(100%) grayscale(50%)",
-        }}
+        className="background__home"
       />
       <div className="text__container">
-        <Typography variant="h4" className="text">
+        <Typography variant="h4" className="text mb-20">
           Bienvenido!
         </Typography>
-        <Typography variant="h2" className="text">
+        <Typography variant="h2" className="text mb-20">
           Mi nombre es Gastón Colaneri
         </Typography>
-        <Typography variant="h4" className="text">
+        <Typography variant="h4" className="text mb-20">
           Soy desarrollador de software
         </Typography>
       </div>

@@ -1,0 +1,42 @@
+.card__item {
+  background-color: var(--BACKGROUND-3);
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.date__item {
+  background-color: var(--AQUA-GREEN-2);
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  width: 180px;
+  justify-content: center;
+  color: var(--TEXT-5);
+  margin-bottom: 10px !important;
+  float: right;
+  font-weight: 700;
+}
+.name__item {
+  color: var(--TEXT-5);
+  margin-bottom: 10px !important;
+  font-weight: 600;
+}
+
+.place__item {
+  margin-bottom: 10px !important;
+}
+
+.place__item a {
+  color: var(--AQUA-GREEN-1);
+  text-decoration: none;
+  margin-bottom: 10px !important;
+  font-size: 18px;
+}
+
+.place__item a:hover {
+  color: var(--AQUA-GREEN-2);
+}
+
+.description__item {
+  color: var(--TEXT-5);
+}
