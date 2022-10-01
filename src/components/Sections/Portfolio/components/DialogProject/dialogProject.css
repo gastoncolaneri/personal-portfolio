@@ -1,0 +1,45 @@
+.dialog__container {
+  display: flex;
+  justify-content: center;
+}
+.MuiDialog-container {
+  max-width: 70%;
+}
+.project__dialog {
+  background-color: var(--BACKGROUND-2);
+  color: var(--TEXT-5);
+}
+
+.dialog__content {
+  display: flex;
+}
+
+.dialog-title__container {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dialog__title {
+  flex: 1;
+}
+
+.dialog__button {
+  color: var(--TEXT-5);
+  flex: 1;
+}
+
+.image-dialog__container {
+  flex: 1;
+}
+
+.dialog__image {
+  width: 100%;
+  height: auto;
+}
+
+.info__dialog {
+  flex: 1;
+}

@@ -1,4 +1,67 @@
+import encontraMiMascotaImg from "../assets/encontra-mi-mascota5.jpg";
+import encontraMiMascotaImg2 from "../assets/encontra-mi-mascota2.png";
+import encontraMiMascotaImg3 from "../assets/encontra-mi-mascota3.png";
+
+import fitnessImg from "../assets/fitness-style4.jpg";
+import fitnessImg2 from "../assets/fitness-style2.png";
+import fitnessImg3 from "../assets/fitness-style3.png";
+
+import wolfGamesImg from "../assets/wolf-games4.jpg";
+import wolfGamesImg2 from "../assets/wolf-games2.png";
+import wolfGamesImg3 from "../assets/wolf-games3.png";
+
+import weatherAppImg from "../assets/weather-query5.png";
+import weatherAppImg2 from "../assets/weather-query2.png";
+import weatherAppImg3 from "../assets/weather-query3.png";
+
 const personalData = ["Gastón Colaneri", 27, "Valencia, España"];
+const portfolio = [
+  {
+    name: "Weather Query App",
+    image: [weatherAppImg, weatherAppImg2, weatherAppImg3],
+    tools: ["React Native", "Expo CLI", "SQL Lite"],
+    web: "https://drive.google.com/file/d/19Ojpn3_8_J4lvwXvSDjEyFMOpfjtYruf/view",
+    isApp: true,
+    github: "https://github.com/gastoncolaneri/Weather-Query-React-Native",
+    cols: 1,
+    rows: 2,
+  },
+  {
+    name: "Encontrá mi mascota",
+    image: [encontraMiMascotaImg, encontraMiMascotaImg2, encontraMiMascotaImg3],
+    tools: [
+      "HTML - CSS - Bootstrap",
+      "JavaScript",
+      "Python - Django",
+      "PostgreSQL",
+    ],
+    web: "https://encontratumascota.herokuapp.com/",
+    isApp: false,
+    github: "https://github.com/gastoncolaneri/WebMascotas",
+    cols: 2,
+    rows: 1,
+  },
+  {
+    name: "Wolf Games",
+    image: [wolfGamesImg, wolfGamesImg2, wolfGamesImg3],
+    tools: ["HTML - CSS - Materialize", "JavaScript"],
+    web: "https://wolfgames.vercel.app/",
+    isApp: false,
+    github: "https://github.com/gastoncolaneri/wolf-games",
+    cols: 1,
+    rows: 1,
+  },
+  {
+    name: "Fitness Style",
+    image: [fitnessImg, fitnessImg2, fitnessImg3],
+    isApp: false,
+    tools: ["HTML - CSS"],
+    web: "https://fitnesstyle.vercel.app/",
+    github: "https://github.com/gastoncolaneri/fitness-style",
+    cols: 1,
+    rows: 1,
+  },
+];
 
 export const englishData = {
   navList: [
@@ -130,4 +193,5 @@ export const spanishData = {
     { name: "Git - Github - Gitlab", number: 70 },
     { name: "Python", number: 60 },
   ],
+  portfolio: portfolio,
 };

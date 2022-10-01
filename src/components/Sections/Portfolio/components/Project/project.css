@@ -1,0 +1,35 @@
+.image__container {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #111418;
+  cursor: pointer;
+}
+
+.image__portfolio {
+  transition: 0.5s;
+}
+.overlay__opacity {
+  filter: opacity(0.4);
+  transition: 0.5s linear;
+}
+
+.image__title {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
+}
+.image__title div {
+  color: #fffff3 !important;
+}
+
+.overlay__imagen {
+  position: absolute;
+  color: var(--TEXT-4);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
