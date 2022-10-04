@@ -1,6 +1,14 @@
-import { Dialog, DialogTitle, DialogContent, IconButton } from "@mui/material";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  IconButton,
+  Typography,
+} from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { IItemData } from "../../../../../interfaces/sections/portfolioSection";
+import { spanishConstants } from "../../../../../utils/constants";
+import DetailRow from "../DetailRow/DetailRow";
 
 import "./dialogProject.css";
 
@@ -8,9 +16,11 @@ interface IDialogProject {
   data: IItemData;
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  type: string;
 }
 
-const DialogProject = ({ data, isOpen, setIsOpen }: IDialogProject) => {
+const DialogProject = ({ data, isOpen, setIsOpen, type }: IDialogProject) => {
+  const toolsUsed = data?.tools.join(", ");
   const handleClose = () => {
     setIsOpen(false);
   };
@@ -18,7 +28,7 @@ const DialogProject = ({ data, isOpen, setIsOpen }: IDialogProject) => {
     <Dialog
       onClose={handleClose}
       open={isOpen}
-      maxWidth="lg"
+      maxWidth="xl"
       className="dialog__container"
     >
       <DialogTitle className="project__dialog dialog-title__container">
@@ -40,7 +50,26 @@ const DialogProject = ({ data, isOpen, setIsOpen }: IDialogProject) => {
             className="dialog__image"
           />
         </div>
-        <div className="info__dialog">Prueba</div>
+        <div className="info__dialog">
+          <div className="project-info__container">
+            <Typography className="section__title">
+              {spanishConstants.modalTitles.projectInfo}:
+            </Typography>
+            <div className="info__text">{data?.description}</div>
+          </div>
+          <div>
+            <Typography className="section__title">
+              {spanishConstants.modalTitles.projectDetails}:
+            </Typography>
+            <DetailRow
+              title={spanishConstants.modalTitles.tools}
+              data={toolsUsed}
+            />
+            <DetailRow title={spanishConstants.modalTitles.type} data={type} />
+            {!data?.isApp && <DetailRow title="URL" data={data?.web} />}
+            <DetailRow title="GitHub" data={data?.github} />
+          </div>
+        </div>
       </DialogContent>
     </Dialog>
   );

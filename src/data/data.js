@@ -18,6 +18,7 @@ const personalData = ["Gastón Colaneri", 27, "Valencia, España"];
 const portfolio = [
   {
     name: "Weather Query App",
+    description: "Description",
     image: [weatherAppImg, weatherAppImg2, weatherAppImg3],
     tools: ["React Native", "Expo CLI", "SQL Lite"],
     web: "https://drive.google.com/file/d/19Ojpn3_8_J4lvwXvSDjEyFMOpfjtYruf/view",
@@ -28,11 +29,15 @@ const portfolio = [
   },
   {
     name: "Encontrá mi mascota",
+    description: "Description",
     image: [encontraMiMascotaImg, encontraMiMascotaImg2, encontraMiMascotaImg3],
     tools: [
-      "HTML - CSS - Bootstrap",
+      "HTML",
+      "CSS",
+      "Bootstrap",
       "JavaScript",
-      "Python - Django",
+      "Python",
+      "Django",
       "PostgreSQL",
     ],
     web: "https://encontratumascota.herokuapp.com/",
@@ -43,8 +48,9 @@ const portfolio = [
   },
   {
     name: "Wolf Games",
+    description: "Description",
     image: [wolfGamesImg, wolfGamesImg2, wolfGamesImg3],
-    tools: ["HTML - CSS - Materialize", "JavaScript"],
+    tools: ["HTML", "CSS", "Materialize", "JavaScript"],
     web: "https://wolfgames.vercel.app/",
     isApp: false,
     github: "https://github.com/gastoncolaneri/wolf-games",
@@ -53,9 +59,10 @@ const portfolio = [
   },
   {
     name: "Fitness Style",
+    description: "Description",
     image: [fitnessImg, fitnessImg2, fitnessImg3],
     isApp: false,
-    tools: ["HTML - CSS"],
+    tools: ["HTML", "CSS"],
     web: "https://fitnesstyle.vercel.app/",
     github: "https://github.com/gastoncolaneri/fitness-style",
     cols: 1,

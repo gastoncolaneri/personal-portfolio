@@ -7,6 +7,7 @@ export interface IItemData {
   github: string;
   cols: number;
   rows: number;
+  description: string;
 }
 export interface IImageItem {
   item: IItemData;

@@ -11,14 +11,15 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { IImageItem } from "../../../../../interfaces/sections/portfolioSection";
 import { spanishConstants } from "../../../../../utils/constants";
 import { srcset } from "../../../../../utils/setSource";
+import DialogProject from "../DialogProject/DialogProject";
 
 import "./project.css";
-import DialogProject from "../DialogProject/DialogProject";
 
 const Project = ({ item, index }: IImageItem) => {
   const [showInfo, setShowInfo] = useState([false, false, false, false]);
   const [showDialog, setShowDialog] = useState(false);
   const tooltipText = spanishConstants.tooltipButtonPortfolio;
+  const typeProject = item?.isApp ? tooltipText?.app : tooltipText?.web;
   const { projectType } = spanishConstants;
 
   const handleClick = (index: number) => {
@@ -61,7 +62,7 @@ const Project = ({ item, index }: IImageItem) => {
           className="image__title"
           position="top"
           actionIcon={
-            <Tooltip title={item?.isApp ? tooltipText?.app : tooltipText?.web}>
+            <Tooltip title={typeProject}>
               <IconButton
                 sx={{ color: "#fffff3ab" }}
                 aria-label={item.name}
@@ -79,6 +80,7 @@ const Project = ({ item, index }: IImageItem) => {
       {showDialog && (
         <DialogProject
           data={item}
+          type={typeProject}
           isOpen={showDialog}
           setIsOpen={setShowDialog}
         />

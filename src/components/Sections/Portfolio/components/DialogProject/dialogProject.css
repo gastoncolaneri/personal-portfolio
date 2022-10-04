@@ -2,9 +2,11 @@
   display: flex;
   justify-content: center;
 }
+
 .MuiDialog-container {
-  max-width: 70%;
+  max-width: 60%;
 }
+
 .project__dialog {
   background-color: var(--BACKGROUND-2);
   color: var(--TEXT-5);
@@ -24,6 +26,8 @@
 
 .dialog__title {
   flex: 1;
+  color: var(--TEXT-4);
+  font-size: 24px;
 }
 
 .dialog__button {
@@ -33,13 +37,25 @@
 
 .image-dialog__container {
   flex: 1;
+  align-items: center;
+  display: flex;
+  margin-right: 20px;
 }
 
 .dialog__image {
   width: 100%;
-  height: auto;
 }
 
 .info__dialog {
   flex: 1;
+}
+
+.section__title {
+  color: var(--TEXT-4);
+  font-size: 20px !important;
+  margin-bottom: 10px !important;
+}
+
+.project-info__container {
+  margin-bottom: 30px;
 }

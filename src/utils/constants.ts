@@ -7,4 +7,10 @@ export const spanishConstants = {
     app: "Aplicación mobile",
     web: "Página Web",
   },
+  modalTitles: {
+    projectInfo: "Información del proyecto",
+    projectDetails: "Detalles del proyecto",
+    type: "Tipo del proyecto",
+    tools: "Herramientas",
+  },
 };
