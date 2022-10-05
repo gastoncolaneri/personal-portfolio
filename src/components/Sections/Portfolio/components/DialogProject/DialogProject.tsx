@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Dialog,
   DialogTitle,
@@ -6,6 +7,8 @@ import {
   Typography,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { IItemData } from "../../../../../interfaces/sections/portfolioSection";
 import { spanishConstants } from "../../../../../utils/constants";
 import DetailRow from "../DetailRow/DetailRow";
@@ -16,14 +19,32 @@ interface IDialogProject {
   data: IItemData;
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  type: string;
 }
 
-const DialogProject = ({ data, isOpen, setIsOpen, type }: IDialogProject) => {
+const DialogProject = ({ data, isOpen, setIsOpen }: IDialogProject) => {
+  const [indexImg, setIndexImg] = useState(0);
   const toolsUsed = data?.tools.join(", ");
+  const type = data?.isApp
+    ? spanishConstants.projectType.app
+    : spanishConstants.projectType.web;
   const handleClose = () => {
     setIsOpen(false);
   };
+
+  const nextImage = () => {
+    if (indexImg < 2) {
+      return setIndexImg((prev) => prev + 1);
+    }
+    return setIndexImg(0);
+  };
+
+  const previousImage = () => {
+    if (indexImg > 0) {
+      return setIndexImg((prev) => prev - 1);
+    }
+    return setIndexImg(2);
+  };
+
   return (
     <Dialog
       onClose={handleClose}
@@ -46,27 +67,45 @@ const DialogProject = ({ data, isOpen, setIsOpen, type }: IDialogProject) => {
           <img
             alt={data?.name}
             loading="lazy"
-            src={data?.image[0]}
+            src={data?.image[indexImg]}
             className="dialog__image"
           />
+          <IconButton
+            aria-label="change-left"
+            onClick={previousImage}
+            className="left__button carousel__button"
+          >
+            <ChevronLeftIcon />
+          </IconButton>
+          <IconButton
+            aria-label="change-right"
+            onClick={nextImage}
+            className="right__button carousel__button"
+          >
+            <ChevronRightIcon />
+          </IconButton>
         </div>
         <div className="info__dialog">
           <div className="project-info__container">
             <Typography className="section__title">
-              {spanishConstants.modalTitles.projectInfo}:
+              {spanishConstants.modalTitles.projectInfo}
             </Typography>
-            <div className="info__text">{data?.description}</div>
+            <div className="info__text">{data?.spanishDescription}</div>
           </div>
           <div>
             <Typography className="section__title">
-              {spanishConstants.modalTitles.projectDetails}:
+              {spanishConstants.modalTitles.projectDetails}
             </Typography>
             <DetailRow
               title={spanishConstants.modalTitles.tools}
               data={toolsUsed}
             />
             <DetailRow title={spanishConstants.modalTitles.type} data={type} />
-            {!data?.isApp && <DetailRow title="URL" data={data?.web} />}
+            {data?.isApp ? (
+              <DetailRow title="APK" data={data?.web} />
+            ) : (
+              <DetailRow title="URL" data={data?.web} />
+            )}
             <DetailRow title="GitHub" data={data?.github} />
           </div>
         </div>

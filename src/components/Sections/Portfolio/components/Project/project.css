@@ -32,4 +32,17 @@
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+  display: flex;
+}
+.overlay__title {
+  /* color: var(--AQUA-GREEN-2); */
+  font-weight: 600 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px !important;
+}
+
+.image__button {
+  padding: 15px !important;
 }

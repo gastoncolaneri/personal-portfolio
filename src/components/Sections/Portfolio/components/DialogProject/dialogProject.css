@@ -31,8 +31,13 @@
 }
 
 .dialog__button {
-  color: var(--TEXT-5);
+  color: var(--TEXT-5) !important;
   flex: 1;
+}
+
+.dialog__button:hover {
+  transition: 0.5s;
+  color: var(--TEXT-4) !important;
 }
 
 .image-dialog__container {
@@ -40,6 +45,7 @@
   align-items: center;
   display: flex;
   margin-right: 20px;
+  position: relative;
 }
 
 .dialog__image {
@@ -58,4 +64,23 @@
 
 .project-info__container {
   margin-bottom: 30px;
+}
+
+.carousel__button {
+  top: 47%;
+  color: var(--AQUA-GREEN-2) !important;
+  padding: 10px;
+  background-color: var(--TEXT-1) !important;
+  position: absolute !important;
+}
+.carousel__button:hover {
+  background-color: var(--BACKGROUND-2) !important;
+  transition: 0.3s linear;
+}
+.left__button {
+  left: 15px;
+}
+
+.right__button {
+  right: 15px;
 }

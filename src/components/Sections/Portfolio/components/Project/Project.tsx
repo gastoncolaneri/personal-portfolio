@@ -8,6 +8,8 @@ import {
 } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import LaptopWindowsIcon from "@mui/icons-material/LaptopWindows";
 import { IImageItem } from "../../../../../interfaces/sections/portfolioSection";
 import { spanishConstants } from "../../../../../utils/constants";
 import { srcset } from "../../../../../utils/setSource";
@@ -19,10 +21,9 @@ const Project = ({ item, index }: IImageItem) => {
   const [showInfo, setShowInfo] = useState([false, false, false, false]);
   const [showDialog, setShowDialog] = useState(false);
   const tooltipText = spanishConstants.tooltipButtonPortfolio;
-  const typeProject = item?.isApp ? tooltipText?.app : tooltipText?.web;
   const { projectType } = spanishConstants;
 
-  const handleClick = (index: number) => {
+  const handleHover = (index: number) => {
     const tmpList = showInfo.map((item, idx) => {
       if (index === idx) {
         return !item;
@@ -38,8 +39,8 @@ const Project = ({ item, index }: IImageItem) => {
         cols={item?.cols}
         rows={item?.rows}
         className="image__container"
-        onMouseEnter={() => handleClick(index)}
-        onMouseLeave={() => handleClick(index)}
+        onMouseEnter={() => handleHover(index)}
+        onMouseLeave={() => handleHover(index)}
         onClick={() => setShowDialog(true)}
       >
         <img
@@ -53,16 +54,14 @@ const Project = ({ item, index }: IImageItem) => {
         {showInfo[index] && (
           <div className="overlay__imagen">
             <Typography className="overlay__title">{item?.name}</Typography>
-            <Typography className="overlay__title">
-              {item?.isApp ? projectType?.app : projectType?.web}
-            </Typography>
+            {item?.isApp ? <PhoneIphoneIcon /> : <LaptopWindowsIcon />}
           </div>
         )}
         <ImageListItemBar
           className="image__title"
           position="top"
           actionIcon={
-            <Tooltip title={typeProject}>
+            <Tooltip title={item?.isApp ? tooltipText?.app : tooltipText?.web}>
               <IconButton
                 sx={{ color: "#fffff3ab" }}
                 aria-label={item.name}
@@ -80,7 +79,6 @@ const Project = ({ item, index }: IImageItem) => {
       {showDialog && (
         <DialogProject
           data={item}
-          type={typeProject}
           isOpen={showDialog}
           setIsOpen={setShowDialog}
         />
