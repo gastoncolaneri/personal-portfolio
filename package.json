@@ -1,6 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "0.1.0",
+  "homepage": "https://gastoncolaneri.github.io/personal-portfolio",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -29,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +55,7 @@
   "devDependencies": {
     "@types/react-router-hash-link": "^2.4.5",
     "@types/react-scroll": "^1.8.4",
-    "@types/react-swipeable-views-utils": "^0.13.4"
+    "@types/react-swipeable-views-utils": "^0.13.4",
+    "gh-pages": "^4.0.0"
   }
 }
