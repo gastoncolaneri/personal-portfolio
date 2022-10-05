@@ -39,7 +39,7 @@ const AboutMe = ({ id }: IListItems) => {
             <div>
               {spanishData?.personalData.map((item, index) => {
                 return (
-                  <>
+                  <div key={index}>
                     <div className="d-flex text-grey">
                       <Typography variant="h6" className="info__label">
                         {`${spanishData?.personalDataLabel[index]}:`}
@@ -47,7 +47,7 @@ const AboutMe = ({ id }: IListItems) => {
                       <Typography variant="h6"> {item}</Typography>
                     </div>
                     <Divider className="divider" />
-                  </>
+                  </div>
                 );
               })}
             </div>

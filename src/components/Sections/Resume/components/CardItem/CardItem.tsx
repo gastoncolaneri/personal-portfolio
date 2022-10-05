@@ -8,7 +8,11 @@ const CardItem = ({ data }: ICardItem) => {
     <div>
       {data?.map((item) => {
         return (
-          <div className="card__item mb-20">
+          <div
+            className="card__item mb-20"
+            key={`
+          ${item?.place}`}
+          >
             <div className="date__item">
               <div>
                 {item?.dates?.start} - {item?.dates?.end}

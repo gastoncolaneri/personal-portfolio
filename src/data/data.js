@@ -1,4 +1,84 @@
+import encontraMiMascotaImg from "../assets/encontra-mi-mascota.jpg";
+import encontraMiMascotaImg2 from "../assets/encontra-mi-mascota2.jpg";
+import encontraMiMascotaImg3 from "../assets/encontra-mi-mascota3.jpg";
+
+import fitnessImg from "../assets/fitness-style.jpg";
+import fitnessImg2 from "../assets/fitness-style2.jpg";
+import fitnessImg3 from "../assets/fitness-style3.jpg";
+
+import wolfGamesImg from "../assets/wolf-games.jpg";
+import wolfGamesImg2 from "../assets/wolf-games2.jpg";
+import wolfGamesImg3 from "../assets/wolf-games3.jpg";
+
+import weatherAppImg from "../assets/weather-query.jpg";
+import weatherAppImg2 from "../assets/weather-query2.jpg";
+import weatherAppImg3 from "../assets/weather-query3.jpg";
+
 const personalData = ["Gastón Colaneri", 27, "Valencia, España"];
+const portfolio = [
+  {
+    name: "Weather Query App",
+    spanishDescription:
+      "Es una aplicación móvil que permite hacer consultas a la api de API Weather para conocer el clima de las ciudades seleccionadas y guardalas para poder chequearlo en otro momento",
+    englishDescription:
+      "This is an mobile application that allows you to make queries to the Weather API in order to know the weather in the selected cities and save them so you can check it in another moment",
+    image: [weatherAppImg, weatherAppImg2, weatherAppImg3],
+    tools: ["React Native", "Expo CLI", "SQL Lite"],
+    web: "https://drive.google.com/file/d/19Ojpn3_8_J4lvwXvSDjEyFMOpfjtYruf/view",
+    isApp: true,
+    github: "https://github.com/gastoncolaneri/Weather-Query-React-Native",
+    cols: 1,
+    rows: 2,
+  },
+  {
+    name: "Encontrá mi mascota",
+    spanishDescription:
+      "Página web en la cual se pueden publicar búsquedas de mascotas perdidas, adoptar una mascota o publicitar un refugio",
+    englishDescription:
+      "Website where you can post searches for lost pets, adopt a pet, or advertise a shelter",
+    image: [encontraMiMascotaImg, encontraMiMascotaImg2, encontraMiMascotaImg3],
+    tools: [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript",
+      "Python",
+      "Django",
+      "PostgreSQL",
+    ],
+    web: "https://encontratumascota.herokuapp.com/",
+    isApp: false,
+    github: "https://github.com/gastoncolaneri/WebMascotas",
+    cols: 2,
+    rows: 1,
+  },
+  {
+    name: "Wolf Games",
+    spanishDescription: "Página web para encontrar juegos gratuitos",
+    englishDescription: "Website to find free games",
+    image: [wolfGamesImg, wolfGamesImg2, wolfGamesImg3],
+    tools: ["HTML", "CSS", "Materialize", "JavaScript"],
+    web: "https://wolfgames.vercel.app/",
+    isApp: false,
+    github: "https://github.com/gastoncolaneri/wolf-games",
+    cols: 1,
+    rows: 1,
+  },
+  {
+    name: "Fitness Style",
+    spanishDescription:
+      "Página web con temática relacionada al deporte, con información sobre ejercicios, alimentación saludable y gimnasios",
+    englishDescription:
+      "Website related to the topic sport with information on exercises, healthy foods, and gyms",
+    image: [fitnessImg, fitnessImg2, fitnessImg3],
+    isApp: false,
+    tools: ["HTML", "CSS"],
+    web: "https://fitnesstyle.vercel.app/",
+    github: "https://github.com/gastoncolaneri/fitness-style",
+    cols: 1,
+    rows: 1,
+  },
+];
 
 export const englishData = {
   navList: [
@@ -130,4 +210,5 @@ export const spanishData = {
     { name: "Git - Github - Gitlab", number: 70 },
     { name: "Python", number: 60 },
   ],
+  portfolio: portfolio,
 };
