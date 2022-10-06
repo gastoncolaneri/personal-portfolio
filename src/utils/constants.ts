@@ -13,4 +13,7 @@ export const spanishConstants = {
     type: "Tipo del proyecto",
     tools: "Herramientas",
   },
+  contactTitle: {
+    networks: "Seguime",
+  },
 };

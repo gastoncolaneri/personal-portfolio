@@ -11,14 +11,7 @@ const Portfolio = ({ id }: IListItems) => {
         mainTitle={spanishData?.navList[3].title}
         backgroundTitle={spanishData?.subNavList[2]}
       />
-      <ImageList
-        gap={20}
-        style={{
-          maxWidth: "1300px",
-          margin: "auto",
-        }}
-        cols={3}
-      >
+      <ImageList gap={20} className="section__container" cols={3}>
         {spanishData?.portfolio.map((item, index) => (
           <Project item={item} index={index} />
         ))}

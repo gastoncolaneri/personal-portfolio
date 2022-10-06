@@ -14,7 +14,7 @@ const Resume = ({ id }: IListItems) => {
         mainTitle={spanishData?.navList[2].title}
         backgroundTitle={spanishData?.subNavList[1]}
       />
-      <div className="resume__container">
+      <div className="resume__container section__container">
         <div className="d-flex space-between">
           <CardList title="Educación" data={spanishData?.education} />
           <CardList title="Experiencia laboral" data={spanishData?.jobs} />

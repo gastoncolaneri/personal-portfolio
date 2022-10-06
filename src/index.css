@@ -42,6 +42,9 @@ code {
 .mb-20 {
   margin-bottom: 20px !important;
 }
+.mb-30 {
+  margin-bottom: 30px !important;
+}
 
 .text-grey {
   color: var(--TEXT-5) !important;
@@ -63,8 +66,18 @@ code {
   width: 100%;
 }
 
+.p-left-0 {
+  padding-left: 0 !important;
+}
+
 .divider {
   border-color: #3e4449 !important;
   margin-top: 5px !important;
   margin-bottom: 5px !important;
+}
+
+.section__container {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }

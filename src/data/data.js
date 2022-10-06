@@ -211,4 +211,14 @@ export const spanishData = {
     { name: "Python", number: 60 },
   ],
   portfolio: portfolio,
+  contactOptions: {
+    email: {
+      value: "colaneri.gaston@hotmail.com",
+      link: "mailto:colaneri.gaston@hotmail.com",
+    },
+    phone: {
+      value: "+34 722 18 52 76",
+      link: "https://api.whatsapp.com/send?phone=34722185276",
+    },
+  },
 };

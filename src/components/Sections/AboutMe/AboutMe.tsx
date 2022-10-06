@@ -14,7 +14,7 @@ const AboutMe = ({ id }: IListItems) => {
         mainTitle={spanishData?.navList[1].title}
         backgroundTitle={spanishData?.subNavList[0]}
       />
-      <div className="about__container">
+      <div className="about__container section__container">
         <div className="about__text">
           <Typography variant="h4" className="mb-20 text-grey">
             Soy

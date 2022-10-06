@@ -1,9 +1,6 @@
 .resume__container {
   display: flex;
   flex-direction: column;
-  max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .button__skills {
