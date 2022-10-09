@@ -1,0 +1,41 @@
+.form__contact {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-contact__button {
+  color: var(--TEXT-4);
+}
+
+.name__input {
+  flex: 1;
+  margin-right: 10px !important;
+  background-color: var(--BACKGROUND-1);
+  border-radius: 5px;
+}
+
+.name__input:focus div {
+  border-color: red !important;
+}
+
+.name__input label {
+  color: var(--TEXT-3);
+}
+.email__input {
+  flex: 1;
+  margin-left: 10px !important;
+  background-color: var(--BACKGROUND-1);
+  border-radius: 5px;
+}
+.email__input label {
+  color: var(--TEXT-3);
+}
+.message__input {
+  flex: 1;
+  background-color: var(--BACKGROUND-1);
+  border-radius: 5px;
+}
+.message__input label {
+  color: var(--TEXT-3);
+}

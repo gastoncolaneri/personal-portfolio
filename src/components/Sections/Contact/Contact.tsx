@@ -1,45 +1,65 @@
-import { doc, getFirestore, setDoc } from "firebase/firestore";
-import { Button, IconButton, TextField, Typography } from "@mui/material";
+import { useState } from "react";
+import { IconButton, Typography } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { app } from "../../../utils/firebase";
+import HomeIcon from "@mui/icons-material/Home";
+import FormContact from "./components/FormContact/FormContact";
 import { spanishData } from "../../../data/data";
 import { IListItems } from "../../../interfaces/navbar/listItems";
 import TitleSections from "../../TitleSections/TitleSections";
+import { spanishConstants } from "../../../utils/constants";
+import CustomAlert from "../../CustomAlert/CustomAlert";
 
 import "./contact.css";
-import { spanishConstants } from "../../../utils/constants";
 
 const Contact = ({ id }: IListItems) => {
+  const addressData = spanishData.personalData.address;
   const mailContact = spanishData.contactOptions.email;
   const phoneContact = spanishData.contactOptions.phone;
   const socialNetwork = spanishData.socialNetworks;
 
-  const firebase = getFirestore(app);
-  const pruebaDB = doc(firebase, "contacto/1");
+  const [isOpenSuccessAlert, setIsOpenSuccessAlert] = useState<boolean>(false);
+  const [isOpenErrorAlert, setIsOpenErrorAlert] = useState<boolean>(false);
 
-  const pruebaFirebase = () => {
-    setDoc(pruebaDB, { name: "Prueba", description: "Esto es una prueba 2" });
-  };
+  const onCloseSuccess = () => setIsOpenSuccessAlert(false);
+  const onCloseError = () => setIsOpenErrorAlert(false);
 
-  pruebaFirebase();
   return (
     <div id={id} className="sections background-2">
       <TitleSections
         mainTitle={spanishData?.navList[4].title}
         backgroundTitle={spanishData?.subNavList[3]}
       />
-      <Button onClick={pruebaFirebase}>Prueba</Button>
       <div className="section__container contact__container">
         <div className="info-contact__container">
+          <div className="d-flex flex-column mb-30 align-start">
+            <Typography
+              variant="h5"
+              className="titles__info-contact text-white"
+            >
+              {spanishConstants.contactTitle.address}
+            </Typography>
+            <IconButton
+              aria-label={addressData.value}
+              href={addressData.link}
+              target="_blank"
+              className="d-flex p-left-0 justify-start"
+              disableRipple
+            >
+              <HomeIcon className="contact__icons" />
+              <Typography className="titles__info-contact text-grey">
+                {addressData.value}
+              </Typography>
+            </IconButton>
+          </div>
           <div className="emai-phone__container">
             <IconButton
               aria-label={mailContact.value}
               href={mailContact.link}
               target="_blank"
-              className="data__contact p-left-0"
+              className="d-flex p-left-0"
               disableRipple
             >
               <EmailIcon className="contact__icons" />
@@ -51,7 +71,7 @@ const Contact = ({ id }: IListItems) => {
               aria-label={phoneContact.value}
               href={phoneContact.link}
               target="_blank"
-              className="data__contact p-left-0"
+              className="d-flex p-left-0"
               disableRipple
             >
               <PhoneIphoneIcon className="contact__icons" />
@@ -59,10 +79,13 @@ const Contact = ({ id }: IListItems) => {
             </IconButton>
           </div>
           <div className="newtork__container">
-            <Typography className="titles__info-contact text-grey">
+            <Typography
+              variant="h5"
+              className="titles__info-contact text-white"
+            >
               {spanishConstants.contactTitle.networks}
             </Typography>
-            <div className="network-icon__container">
+            <div className="d-flex">
               <IconButton
                 aria-label={socialNetwork.linkedin}
                 href={socialNetwork.linkedin}
@@ -84,39 +107,23 @@ const Contact = ({ id }: IListItems) => {
             </div>
           </div>
         </div>
-        <div className="form__contact">
-          <div className="input__row">
-            <TextField
-              required
-              id="outlined-required"
-              label="Nombre"
-              size="small"
-              className="name__input"
-              fullWidth
-            />
-            <TextField
-              required
-              id="outlined-required"
-              label="Email"
-              size="small"
-              className="email__input"
-              fullWidth
-            />
-          </div>
-          <div className="input__row">
-            <TextField
-              required
-              id="outlined-required"
-              label="Mensaje"
-              size="small"
-              className="message__input"
-              fullWidth
-              multiline
-              rows={4}
-            />
-          </div>
-        </div>
+        <FormContact
+          openSuccessAlert={setIsOpenSuccessAlert}
+          openErrorAlert={setIsOpenErrorAlert}
+        />
       </div>
+      <CustomAlert
+        open={isOpenSuccessAlert}
+        onClose={onCloseSuccess}
+        type="success"
+        message={spanishConstants.alertMessage.success}
+      />
+      <CustomAlert
+        open={isOpenErrorAlert}
+        onClose={onCloseError}
+        type="error"
+        message={spanishConstants.alertMessage.error}
+      />
     </div>
   );
 };

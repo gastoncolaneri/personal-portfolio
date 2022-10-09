@@ -120,7 +120,13 @@ export const spanishData = {
     linkedin: "https://www.linkedin.com/in/cgastoncolaneri/",
     github: "https://github.com/gastoncolaneri",
   },
-  personalData: personalData,
+  personalData: {
+    aboutData: personalData,
+    address: {
+      value: "Valencia, España (46025)",
+      link: "https://www.google.es/maps/place/Benicalap,+Valencia/@39.4938117,-0.4000469,15z/data=!3m1!4b1!4m5!3m4!1s0xd6045f3bfd8b6db:0x7abd9a7a738d24fa!8m2!3d39.4935471!4d-0.3913172?hl=es",
+    },
+  },
   personalDataLabel: ["Nombre", "Edad", "De"],
   resumeDownloadLink: {
     link: "https://drive.google.com/file/d/1L7PEHuBqKsbqiIHETOYrfCuMgQXjgvP-/view?usp=sharing",

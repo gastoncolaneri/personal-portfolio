@@ -1,8 +1,6 @@
 .contact__container {
   display: flex;
   width: 100%;
-  height: 200px;
-  color: var(--TEXT-5) !important;
 }
 
 .info-contact__container {
@@ -19,66 +17,20 @@
   margin-bottom: 30px;
 }
 
-.data__contact {
-  display: flex;
-}
-
 .contact__icons {
   margin-right: 15px;
-  color: var(--TEXT-5);
+  color: var(--AQUA-GREEN-1);
 }
 .network__icons {
   margin-right: 15px;
   color: var(--TEXT-5);
 }
 .network__icons:hover {
-  color: var(--TEXT-4);
+  color: var(--AQUA-GREEN-1);
   transition: 0.5s;
-}
-
-.form__contact {
-  flex: 2;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
 }
 
 .titles__info-contact {
   font-size: 20px;
   color: var(--TEXT-4) !important;
-}
-
-.network-icon__container {
-  display: flex;
-}
-
-.input__row {
-  display: flex;
-  margin-bottom: 15px !important;
-}
-.name__input {
-  flex: 1;
-  margin-right: 10px !important;
-  background-color: var(--BACKGROUND-1);
-  border-radius: 5px;
-}
-.name__input label {
-  color: var(--TEXT-3);
-}
-.email__input {
-  flex: 1;
-  margin-left: 10px !important;
-  background-color: var(--BACKGROUND-1);
-  border-radius: 5px;
-}
-.email__input label {
-  color: var(--TEXT-3);
-}
-.message__input {
-  flex: 1;
-  background-color: var(--BACKGROUND-1);
-  border-radius: 5px;
-}
-.message__input label {
-  color: var(--TEXT-3);
 }
