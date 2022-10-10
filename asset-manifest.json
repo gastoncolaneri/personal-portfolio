@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/personal-portfolio/static/css/main.66e612c7.css",
-    "main.js": "/personal-portfolio/static/js/main.6260e67d.js",
+    "main.css": "/personal-portfolio/static/css/main.be499964.css",
+    "main.js": "/personal-portfolio/static/js/main.cec6eccb.js",
     "static/media/backgroundGif.gif": "/personal-portfolio/static/media/backgroundGif.18bcba89d4290c3f7580.gif",
     "static/media/fitness-style3.jpg": "/personal-portfolio/static/media/fitness-style3.6dd32fec2cf2c8740f55.jpg",
     "static/media/fitness-style2.jpg": "/personal-portfolio/static/media/fitness-style2.1239d5abd8f57d91f9de.jpg",
@@ -17,11 +17,11 @@
     "static/media/foto.jpg": "/personal-portfolio/static/media/foto.aa8e65086211dea5aed3.jpg",
     "static/media/weather-query2.jpg": "/personal-portfolio/static/media/weather-query2.f4e1880253b708717b3f.jpg",
     "index.html": "/personal-portfolio/index.html",
-    "main.66e612c7.css.map": "/personal-portfolio/static/css/main.66e612c7.css.map",
-    "main.6260e67d.js.map": "/personal-portfolio/static/js/main.6260e67d.js.map"
+    "main.be499964.css.map": "/personal-portfolio/static/css/main.be499964.css.map",
+    "main.cec6eccb.js.map": "/personal-portfolio/static/js/main.cec6eccb.js.map"
   },
   "entrypoints": [
-    "static/css/main.66e612c7.css",
-    "static/js/main.6260e67d.js"
+    "static/css/main.be499964.css",
+    "static/js/main.cec6eccb.js"
   ]
 }
