@@ -8,13 +8,15 @@ import "../sections.css";
 import "./about.css";
 
 const AboutMe = ({ id }: IListItems) => {
+  const personalData = spanishData?.personalData?.aboutData;
+
   return (
     <div id={id} className="sections background-1">
       <TitleSections
         mainTitle={spanishData?.navList[1].title}
         backgroundTitle={spanishData?.subNavList[0]}
       />
-      <div className="about__container">
+      <div className="about__container section__container">
         <div className="about__text">
           <Typography variant="h4" className="mb-20 text-grey">
             Soy
@@ -37,7 +39,7 @@ const AboutMe = ({ id }: IListItems) => {
         <div className="info__container">
           <div className="info__text">
             <div>
-              {spanishData?.personalData.map((item, index) => {
+              {personalData?.map((item, index) => {
                 return (
                   <div key={index}>
                     <div className="d-flex text-grey">
@@ -51,7 +53,7 @@ const AboutMe = ({ id }: IListItems) => {
                 );
               })}
             </div>
-            <DownloadButton customClassname="button__about" />
+            <DownloadButton customClassname="green__button" />
           </div>
         </div>
       </div>
