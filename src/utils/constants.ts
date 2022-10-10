@@ -26,6 +26,13 @@ export const spanishConstants = {
   contactLabels: {
     name: "Nombre",
     email: "Email",
-    message: "Escribe tu mensaje",
+    message: "Escribí tu mensaje",
+  },
+  errorHelpers: {
+    contact: {
+      name: "Por favor, ingresá tu nombre",
+      message: "Por favor, ingresá tu mensaje",
+      email: "Por favor, ingresá un email válido",
+    },
   },
 };

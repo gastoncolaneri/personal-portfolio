@@ -22,16 +22,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-*::selection {
-  background: var(--AQUA-GREEN-1);
-  color: var(--TEXT-4);
-}
-
-*::-moz-selection {
-  background: var(--AQUA-GREEN-1);
-  color: var(--TEXT-4);
-}
-
 input,
 textarea {
   color: var(--TEXT-5) !important;
@@ -47,6 +37,15 @@ code {
 }
 
 /** Global classes **/
+
+#outlined-required-helper-text {
+  background-color: var(--BACKGROUND-2) !important;
+  padding-top: 4px;
+  padding-right: 14px;
+  padding-bottom: 0;
+  padding-left: 14px;
+  margin: 0;
+}
 
 .mb-20 {
   margin-bottom: 20px !important;

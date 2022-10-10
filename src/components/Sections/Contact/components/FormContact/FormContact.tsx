@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { app } from "../../../../../utils/firebase";
 import { spanishConstants } from "../../../../../utils/constants";
+import { emailValidator } from "../../../../../utils/validators";
 
 import "./formContact.css";
 
@@ -19,32 +20,18 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
 
   const [nameInput, setNameInput] = useState<string>("");
   const [emailInput, setEmailInput] = useState<string>("");
+  const [finalEmailInput, setFinalEmailInput] = useState<string>("");
   const [messageInput, setMessageInput] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [errorEmail, setErrorEmail] = useState<boolean>(false);
+  const [errorName, setErrorName] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<boolean>(false);
 
   const addMessage = doc(firebase, `contacto/${uuidv4()}`);
 
-  const isDisabled = () => {
-    if (nameInput?.length && emailInput?.length && messageInput?.length) {
-      return false;
-    }
-    return true;
-  };
-
-  const sendEmail = () => {
-    debugger;
-    const templateParams = {
-      name: nameInput,
-      email: emailInput,
-      message: messageInput,
-    };
+  const configEmail = (templateId: string, params: any) => {
     emailjs
-      .send(
-        "service_l1m7qbg",
-        "template_cxkbfpc",
-        templateParams,
-        "n5nyG923UmFV8QVG9"
-      )
+      .send("service_l1m7qbg", templateId, params, "n5nyG923UmFV8QVG9")
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
@@ -55,11 +42,46 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
       );
   };
 
+  const sendEmail = () => {
+    const personalTemplate = {
+      name: nameInput,
+      email: finalEmailInput,
+      message: messageInput,
+    };
+    const externalTemplate = {
+      name: nameInput,
+    };
+    configEmail("template_cxkbfpc", personalTemplate);
+    configEmail("template_2btheoc", externalTemplate);
+  };
+
+  const checkEmailInput = (data: string) => {
+    setEmailInput(data);
+    if (data === "") {
+      return setErrorEmail(false);
+    }
+    if (emailValidator(data)) {
+      setErrorEmail(false);
+      return setFinalEmailInput(data);
+    }
+    setFinalEmailInput("");
+    return setErrorEmail(true);
+  };
+
   const handleClick = () => {
+    if (!nameInput?.length || !messageInput?.length || !emailInput?.length) {
+      setErrorName(!nameInput?.length);
+      setErrorMessage(!messageInput?.length);
+      setErrorEmail(!emailInput?.length);
+      return;
+    }
+
+    setErrorName(false);
+    setErrorMessage(false);
     setIsLoading(true);
     const formData = {
       name: nameInput,
-      email: emailInput,
+      email: finalEmailInput,
       description: messageInput,
     };
     setDoc(addMessage, formData)
@@ -96,6 +118,8 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
           fullWidth
           value={nameInput}
           onChange={(e) => setNameInput(e.target.value)}
+          error={errorName}
+          helperText={errorName && spanishConstants.errorHelpers.contact.name}
         />
         <TextField
           required
@@ -107,7 +131,9 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
           type="email"
           fullWidth
           value={emailInput}
-          onChange={(e) => setEmailInput(e.target.value)}
+          onChange={(e) => checkEmailInput(e.target.value)}
+          error={errorEmail}
+          helperText={errorEmail && spanishConstants.errorHelpers.contact.email}
         />
       </div>
       <div className="d-flex mb-20">
@@ -123,6 +149,10 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
           rows={4}
           value={messageInput}
           onChange={(e) => setMessageInput(e.target.value)}
+          error={errorMessage}
+          helperText={
+            errorMessage && spanishConstants.errorHelpers.contact.message
+          }
         />
       </div>
       <div className="d-flex mb-20 justify-center">
@@ -130,7 +160,7 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
           variant="contained"
           className="green__button button form-contact__button"
           onClick={handleClick}
-          disabled={isDisabled()}
+          // disabled={isDisabled()}
           loading={isLoading}
           loadingPosition="start"
         >

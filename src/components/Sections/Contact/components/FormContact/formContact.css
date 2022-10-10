@@ -11,12 +11,11 @@
 .name__input {
   flex: 1;
   margin-right: 10px !important;
-  background-color: var(--BACKGROUND-1);
   border-radius: 5px;
 }
 
-.name__input:focus div {
-  border-color: red !important;
+.name__input div {
+  background-color: var(--BACKGROUND-1);
 }
 
 .name__input label {
@@ -25,16 +24,20 @@
 .email__input {
   flex: 1;
   margin-left: 10px !important;
-  background-color: var(--BACKGROUND-1);
   border-radius: 5px;
+}
+.email__input div {
+  background-color: var(--BACKGROUND-1);
 }
 .email__input label {
   color: var(--TEXT-3);
 }
 .message__input {
   flex: 1;
-  background-color: var(--BACKGROUND-1);
   border-radius: 5px;
+}
+.message__input div {
+  background-color: var(--BACKGROUND-1);
 }
 .message__input label {
   color: var(--TEXT-3);
