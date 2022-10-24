@@ -2,6 +2,7 @@
   background-color: var(--BACKGROUND-3);
   border-radius: 8px;
   padding: 25px;
+  position: relative;
 }
 
 .date__item {
@@ -9,17 +10,17 @@
   padding: 5px;
   border-radius: 20px;
   display: flex;
-  width: 180px;
   justify-content: center;
   color: var(--TEXT-5);
   margin-bottom: 10px !important;
-  float: right;
   font-weight: 700;
+  width: 170px;
 }
 .name__item {
   color: var(--TEXT-5);
   margin-bottom: 10px !important;
-  font-weight: 600;
+  font-weight: 600 !important;
+  max-width: 350px;
 }
 
 .place__item {
@@ -30,7 +31,6 @@
   color: var(--AQUA-GREEN-1);
   text-decoration: none;
   margin-bottom: 10px !important;
-  font-size: 18px;
 }
 
 .place__item a:hover {

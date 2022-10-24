@@ -123,3 +123,20 @@ code {
   padding: 0.8rem 2.6rem !important;
   align-self: center;
 }
+
+/** Media Queries **/
+
+/* @media (max-width: 599px) {
+  .text {
+    font-size: 14px !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+}
+@media (min-width: 1200px) and (max-width: 1535px) {
+}
+
+@media (min-width: 1536px) {
+} */

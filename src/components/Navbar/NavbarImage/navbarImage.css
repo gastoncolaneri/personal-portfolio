@@ -13,11 +13,15 @@
   width: 170px !important;
   height: 170px !important;
 }
+.avatar__navbar-collapse {
+  border: 1px solid var(--TEXT-1);
+  width: 40px !important;
+  height: 40px !important;
+}
 
 .fullname__navbar {
   font-weight: 600 !important;
   color: var(--TEXT-4);
   text-align: center;
   opacity: 0.9;
-
 }

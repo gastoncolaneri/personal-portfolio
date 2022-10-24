@@ -1,15 +1,18 @@
 import { Typography } from "@mui/material";
 import { ITitleSections } from "../../interfaces/sections/titleSections";
+import { backTitleLayout, mainTitleLayout } from "../../utils/constants";
 
 import "./titleSections.css";
 
-const TitleSections = ({ mainTitle, backgroundTitle }: ITitleSections) => {
+const TitleSections = ({ title, fadedTitle }: ITitleSections) => {
   return (
     <div className="title__container">
-      <Typography variant="h1" gutterBottom className="mainTitle">
-        {mainTitle}
+      <Typography className="title" sx={mainTitleLayout}>
+        {title}
       </Typography>
-      <Typography className="backgroundTitle">{backgroundTitle}</Typography>
+      <Typography className="fadedTitle" sx={backTitleLayout}>
+        {fadedTitle}
+      </Typography>
     </div>
   );
 };

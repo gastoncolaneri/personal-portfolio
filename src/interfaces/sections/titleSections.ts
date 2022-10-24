@@ -1,4 +1,4 @@
 export interface ITitleSections {
-  mainTitle: string;
-  backgroundTitle: string;
+  title: string;
+  fadedTitle: string;
 }

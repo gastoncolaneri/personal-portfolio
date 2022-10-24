@@ -14,3 +14,8 @@ export interface IResume {
 export interface IDownloadButton {
   customClassname?: string;
 }
+
+export interface IContainer {
+  children: React.ReactNode;
+  customClassname?: string;
+}

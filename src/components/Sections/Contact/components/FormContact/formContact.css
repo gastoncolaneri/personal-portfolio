@@ -10,7 +10,6 @@
 
 .name__input {
   flex: 1;
-  margin-right: 10px !important;
   border-radius: 5px;
 }
 
@@ -23,7 +22,6 @@
 }
 .email__input {
   flex: 1;
-  margin-left: 10px !important;
   border-radius: 5px;
 }
 .email__input div {

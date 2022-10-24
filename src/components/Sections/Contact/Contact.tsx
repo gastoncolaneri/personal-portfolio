@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IconButton, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -9,7 +9,7 @@ import FormContact from "./components/FormContact/FormContact";
 import { spanishData } from "../../../data/data";
 import { IListItems } from "../../../interfaces/navbar/listItems";
 import TitleSections from "../../TitleSections/TitleSections";
-import { spanishConstants } from "../../../utils/constants";
+import { contactLayout, spanishConstants } from "../../../utils/constants";
 import CustomAlert from "../../CustomAlert/CustomAlert";
 
 import "./contact.css";
@@ -29,10 +29,10 @@ const Contact = ({ id }: IListItems) => {
   return (
     <div id={id} className="sections background-2">
       <TitleSections
-        mainTitle={spanishData?.navList[4].title}
-        backgroundTitle={spanishData?.subNavList[3]}
+        fadedTitle={spanishData?.navList[4].title}
+        title={spanishData?.subNavList[3]}
       />
-      <div className="section__container contact__container">
+      <Box className="section__container contact__container" sx={contactLayout}>
         <div className="info-contact__container">
           <div className="d-flex flex-column mb-30 align-start">
             <Typography
@@ -111,7 +111,7 @@ const Contact = ({ id }: IListItems) => {
           openSuccessAlert={setIsOpenSuccessAlert}
           openErrorAlert={setIsOpenErrorAlert}
         />
-      </div>
+      </Box>
       <CustomAlert
         open={isOpenSuccessAlert}
         onClose={onCloseSuccess}

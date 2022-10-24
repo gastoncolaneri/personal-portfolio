@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TextField, Typography } from "@mui/material";
+import { Grid, TextField, Typography } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 import emailjs from "@emailjs/browser";
 import { v4 as uuidv4 } from "uuid";
@@ -107,35 +107,41 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
           {spanishConstants.contactTitle.message}
         </Typography>
       </div>
-      <div className="d-flex mb-20">
-        <TextField
-          required
-          id="outlined-required"
-          label={spanishConstants.contactLabels.name}
-          size="small"
-          className="name__input"
-          name="name"
-          fullWidth
-          value={nameInput}
-          onChange={(e) => setNameInput(e.target.value)}
-          error={errorName}
-          helperText={errorName && spanishConstants.errorHelpers.contact.name}
-        />
-        <TextField
-          required
-          id="outlined-required"
-          label={spanishConstants.contactLabels.email}
-          size="small"
-          className="email__input"
-          name="email"
-          type="email"
-          fullWidth
-          value={emailInput}
-          onChange={(e) => checkEmailInput(e.target.value)}
-          error={errorEmail}
-          helperText={errorEmail && spanishConstants.errorHelpers.contact.email}
-        />
-      </div>
+      <Grid container spacing={2} className="d-flex mb-20">
+        <Grid item xs={12} md={6}>
+          <TextField
+            required
+            id="outlined-required"
+            label={spanishConstants.contactLabels.name}
+            size="small"
+            className="name__input"
+            name="name"
+            fullWidth
+            value={nameInput}
+            onChange={(e) => setNameInput(e.target.value)}
+            error={errorName}
+            helperText={errorName && spanishConstants.errorHelpers.contact.name}
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            required
+            id="outlined-required"
+            label={spanishConstants.contactLabels.email}
+            size="small"
+            className="email__input"
+            name="email"
+            type="email"
+            fullWidth
+            value={emailInput}
+            onChange={(e) => checkEmailInput(e.target.value)}
+            error={errorEmail}
+            helperText={
+              errorEmail && spanishConstants.errorHelpers.contact.email
+            }
+          />
+        </Grid>
+      </Grid>
       <div className="d-flex mb-20">
         <TextField
           required

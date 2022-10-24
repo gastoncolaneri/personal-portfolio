@@ -21,7 +21,6 @@ const Project = ({ item, index }: IImageItem) => {
   const [showInfo, setShowInfo] = useState([false, false, false, false]);
   const [showDialog, setShowDialog] = useState(false);
   const tooltipText = spanishConstants.tooltipButtonPortfolio;
-  const { projectType } = spanishConstants;
 
   const handleHover = (index: number) => {
     const tmpList = showInfo.map((item, idx) => {

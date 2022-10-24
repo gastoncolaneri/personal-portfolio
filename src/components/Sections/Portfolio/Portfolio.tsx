@@ -8,8 +8,8 @@ const Portfolio = ({ id }: IListItems) => {
   return (
     <div id={id} className="sections background-1">
       <TitleSections
-        mainTitle={spanishData?.navList[3].title}
-        backgroundTitle={spanishData?.subNavList[2]}
+        fadedTitle={spanishData?.navList[3].title}
+        title={spanishData?.subNavList[2]}
       />
       <ImageList gap={20} className="section__container" cols={3}>
         {spanishData?.portfolio.map((item, index) => (

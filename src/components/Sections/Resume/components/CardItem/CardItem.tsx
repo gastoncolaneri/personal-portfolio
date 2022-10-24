@@ -1,5 +1,6 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { ICardItem } from "../../../../../interfaces/sections/resumeSection";
+import { normalText, normalTitle } from "../../../../../utils/constants";
 
 import "./cardItem.css";
 
@@ -13,21 +14,19 @@ const CardItem = ({ data }: ICardItem) => {
             key={`
           ${item?.place}`}
           >
-            <div className="date__item">
-              <div>
-                {item?.dates?.start} - {item?.dates?.end}
-              </div>
-            </div>
-            <Typography variant="h6" className="name__item">
+            <Typography className="name__item" sx={normalTitle}>
               {item?.name}
             </Typography>
-            <Typography className="place__item">
+            <Typography className="place__item" sx={normalTitle}>
               <a href={item?.url} target="_blank" rel="noreferrer">
                 {item?.place}
               </a>
             </Typography>
+            <Box className="date__item" sx={normalText}>
+              {item?.dates?.start} - {item?.dates?.end}
+            </Box>
             {item?.description && (
-              <Typography className="description__item">
+              <Typography className="description__item" sx={normalText}>
                 {item?.description}
               </Typography>
             )}

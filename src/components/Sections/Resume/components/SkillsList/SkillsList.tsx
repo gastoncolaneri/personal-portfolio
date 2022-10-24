@@ -1,16 +1,17 @@
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { ISkillsList } from "../../../../../interfaces/sections/resumeSection";
+import { resumeTitles, skillsLayout } from "../../../../../utils/constants";
 import ItemSkill from "../SkillItem/ItemSkill";
 
 import "./skillsList.css";
 
 const SkillsList = ({ data }: ISkillsList) => {
   return (
-    <div className="mb-20">
-      <Typography variant="h4" className="card__title mb-20">
+    <Box className="mb-20">
+      <Typography className="card__title mb-20" sx={resumeTitles}>
         Habilidades
       </Typography>
-      <div className="skills__container">
+      <Box className="skills__container" sx={skillsLayout}>
         {data?.map((item) => {
           return (
             <ItemSkill
@@ -20,8 +21,8 @@ const SkillsList = ({ data }: ISkillsList) => {
             />
           );
         })}
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 

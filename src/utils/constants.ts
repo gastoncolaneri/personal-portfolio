@@ -36,3 +36,58 @@ export const spanishConstants = {
     },
   },
 };
+
+export const navbarLayout = { display: { xs: "none", md: "flex" } };
+
+export const collapseNavbarLayout = { display: { xs: "flex", md: "none" } };
+
+export const sectionsLayout = {
+  flexDirection: { xs: "column", sm: "column", md: "column", lg: "row" },
+};
+export const contactLayout = {
+  flexDirection: { xs: "column", sm: "row", md: "row", lg: "row" },
+};
+export const backTitleLayout = {
+  fontSize: {
+    xs: "3rem",
+    sm: "4rem",
+    md: "5rem",
+    lg: "8rem",
+  },
+};
+
+export const mainTitleLayout = {
+  fontSize: {
+    xs: "1.5rem",
+    md: "2rem",
+    lg: "3rem",
+  },
+  top: { xs: "25%", sm: "30%" },
+  paddingBottom: {
+    xs: "30px",
+    md: "40px",
+    lg: "50px",
+  },
+};
+
+export const resumeLayout = {
+  width: {
+    xs: "100%",
+    lg: "47%",
+  },
+};
+
+export const resumeTitles = {
+  fontSize: {
+    xs: "1.5rem",
+    md: "2rem",
+  },
+};
+
+export const skillsLayout = { flexDirection: { xs: "column", sm: "row" } };
+
+export const footerLayout = { padding: { xs: "15px", sm: "20px", md: "30px" } };
+
+export const normalText = { fontSize: { xs: "14px", md: "16px" } };
+
+export const normalTitle = { fontSize: { xs: "16px", md: "18px" } };

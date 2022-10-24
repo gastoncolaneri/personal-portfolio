@@ -12,13 +12,13 @@ const Home = ({ id }: IListItems) => {
         className="background__home"
       />
       <div className="text__container">
-        <Typography variant="h4" className="text mb-20">
+        <Typography variant="h4" className="mb-20">
           Bienvenido!
         </Typography>
-        <Typography variant="h2" className="text mb-20">
+        <Typography variant="h2" className="mb-20">
           Mi nombre es Gastón Colaneri
         </Typography>
-        <Typography variant="h4" className="text mb-20">
+        <Typography variant="h4" className="mb-20">
           Soy desarrollador de software
         </Typography>
       </div>
