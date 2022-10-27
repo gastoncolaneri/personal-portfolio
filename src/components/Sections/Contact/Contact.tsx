@@ -5,12 +5,12 @@ import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import HomeIcon from "@mui/icons-material/Home";
-import FormContact from "./components/FormContact/FormContact";
-import { spanishData } from "../../../data/data";
-import { IListItems } from "../../../interfaces/navbar/listItems";
-import TitleSections from "../../TitleSections/TitleSections";
-import { contactLayout, spanishConstants } from "../../../utils/constants";
-import CustomAlert from "../../CustomAlert/CustomAlert";
+import { IListItems } from "interfaces/sections/navbar";
+import TitleSections from "components/TitleSections";
+import CustomAlert from "components/CustomAlert";
+import FormContact from "components/Sections/Contact/components/FormContact";
+import { contactLayout, spanishConstants } from "utils/constants";
+import { spanishData } from "data";
 
 import "./contact.css";
 

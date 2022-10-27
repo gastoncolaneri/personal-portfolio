@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { IContainer } from "../../interfaces";
+import { IContainer } from "interfaces";
 
 import "./container.css";
 

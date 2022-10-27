@@ -9,9 +9,9 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { IItemData } from "../../../../../interfaces/sections/portfolioSection";
-import { spanishConstants } from "../../../../../utils/constants";
-import DetailRow from "../DetailRow/DetailRow";
+import { IItemData } from "interfaces/sections/portfolio";
+import { spanishConstants } from "utils/constants";
+import DetailRow from "components/Sections/Portfolio/components/DetailRow";
 
 import "./dialogProject.css";
 

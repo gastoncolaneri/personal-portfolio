@@ -1,5 +1,5 @@
 import { Typography, LinearProgress } from "@mui/material";
-import { IItemSkill } from "../../../../../interfaces/sections/resumeSection";
+import { IItemSkill } from "interfaces/sections/resume";
 
 import "./itemSkill.css";
 

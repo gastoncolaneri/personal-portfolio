@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import { ICardList } from "../../../../../interfaces/sections/resumeSection";
-import { resumeLayout, resumeTitles } from "../../../../../utils/constants";
-import CardItem from "../CardItem";
+import { ICardList } from "interfaces/sections/resume";
+import { resumeLayout, resumeTitles } from "utils/constants";
+import CardItem from "components/Sections/Resume/components/CardItem";
 
 import "./cardList.css";
 

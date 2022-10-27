@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { CardMedia, Typography } from "@mui/material";
 import Typewriter from "typewriter-effect";
-import { IListItems } from "../../../interfaces/navbar/listItems";
+import { IListItems } from "interfaces/sections/navbar";
+import { roles } from "utils/constants";
 
 import "./home.css";
-import { roles } from "../../../utils/constants";
 
 const Home = ({ id }: IListItems) => {
   const [roleName, setRoleName] = useState("");
@@ -35,7 +35,7 @@ const Home = ({ id }: IListItems) => {
     <div id={id} className="container">
       <CardMedia
         component="img"
-        image={require("../../../assets/backgroundGif.gif")}
+        image={require("assets/backgroundGif.gif")}
         className="background__home"
       />
       <div className="text__container">

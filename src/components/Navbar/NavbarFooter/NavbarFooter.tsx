@@ -1,9 +1,9 @@
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { spanishData } from "../../../data/data";
+import { spanishData } from "data";
 
 import "./navbarFooter.css";
-import NavbarFooterIcon from "../NavbarFooterIcon/NavbarFooterIcon";
+import NavbarFooterIcon from "components/Navbar/NavbarFooterIcon";
 
 const NavbarFooter = () => {
   return (

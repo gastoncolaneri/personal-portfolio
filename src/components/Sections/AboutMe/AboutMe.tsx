@@ -1,15 +1,10 @@
 import { Box, Divider, Typography } from "@mui/material";
-import { spanishData } from "../../../data/data";
-import { IListItems } from "../../../interfaces/navbar/listItems";
-import TitleSections from "../../TitleSections/TitleSections";
-import DownloadButton from "../../DownloadButton";
-import {
-  normalText,
-  normalTitle,
-  sectionsLayout,
-} from "../../../utils/constants";
+import { spanishData } from "data";
+import TitleSections from "components/TitleSections";
+import DownloadButton from "components/DownloadButton";
+import { normalText, normalTitle, sectionsLayout } from "utils/constants";
+import { IListItems } from "interfaces/sections/navbar";
 
-import "../sections.css";
 import "./about.css";
 
 const AboutMe = ({ id }: IListItems) => {

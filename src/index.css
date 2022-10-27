@@ -124,6 +124,28 @@ code {
   align-self: center;
 }
 
+.sections {
+  padding: 100px 50px 50px 50px;
+}
+.background-1 {
+  background-color: #212529;
+}
+
+.background-2 {
+  background-color: #343a40;
+}
+
+.avatar__navbar {
+  border: 6px solid var(--TEXT-1);
+  width: 170px !important;
+  height: 170px !important;
+}
+.avatar__navbar-collapse {
+  border: 1px solid var(--TEXT-1);
+  width: 100px !important;
+  height: 100px !important;
+}
+
 /** Media Queries **/
 
 @media (max-width: 599px) {
