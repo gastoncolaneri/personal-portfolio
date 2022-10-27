@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import { ICardItem } from "../../../../../interfaces/sections/resumeSection";
-import { normalText, normalTitle } from "../../../../../utils/constants";
+import { ICardItem } from "interfaces/sections/resume";
+import { normalText, normalTitle } from "utils/constants";
 
 import "./cardItem.css";
 

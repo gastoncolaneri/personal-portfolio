@@ -1,7 +1,7 @@
 import { Typography, Box } from "@mui/material";
-import { ISkillsList } from "../../../../../interfaces/sections/resumeSection";
-import { resumeTitles, skillsLayout } from "../../../../../utils/constants";
-import ItemSkill from "../SkillItem/ItemSkill";
+import { ISkillsList } from "interfaces/sections/resume";
+import { resumeTitles, skillsLayout } from "utils/constants";
+import ItemSkill from "components/Sections/Resume/components/SkillItem";
 
 import "./skillsList.css";
 

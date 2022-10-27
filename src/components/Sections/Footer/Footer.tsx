@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import { spanishData } from "../../../data/data";
-import { footerLayout } from "../../../utils/constants";
+import { spanishData } from "data";
+import { footerLayout } from "utils/constants";
 
 import "./footer.css";
 

@@ -1,5 +1,5 @@
 import { CardMedia, Typography } from "@mui/material";
-import { IListItems } from "../../../interfaces/navbar/listItems";
+import { IListItems } from "interfaces/sections/navbar";
 
 import "./home.css";
 
@@ -8,7 +8,7 @@ const Home = ({ id }: IListItems) => {
     <div id={id} className="container">
       <CardMedia
         component="img"
-        image={require("../../../assets/backgroundGif.gif")}
+        image={require("assets/backgroundGif.gif")}
         className="background__home"
       />
       <div className="text__container">

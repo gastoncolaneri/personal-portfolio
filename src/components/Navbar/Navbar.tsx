@@ -1,13 +1,15 @@
-import "./navbar.css";
-import NavbarFooter from "./NavbarFooter";
-import NavbarImage from "./NavbarImage";
-import NavbarList from "./NavbarList";
+import { INavbar } from "interfaces/sections/navbar";
+import NavbarFooter from "components/Navbar/NavbarFooter";
+import NavbarImage from "components/Navbar/NavbarImage";
+import NavbarList from "components/Navbar/NavbarList";
 
-const Navbar = () => {
+import "./navbar.css";
+
+const Navbar = ({ setIsOpenDrawer, customClassname }: INavbar) => {
   return (
     <div className="navbar__container">
-      <NavbarImage />
-      <NavbarList />
+      <NavbarImage customClassname={customClassname} />
+      <NavbarList setIsOpenDrawer={setIsOpenDrawer} />
       <NavbarFooter />
     </div>
   );

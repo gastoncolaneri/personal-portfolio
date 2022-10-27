@@ -1,8 +1,8 @@
 import { ImageList } from "@mui/material";
-import { spanishData } from "../../../data/data";
-import { IListItems } from "../../../interfaces/navbar/listItems";
-import TitleSections from "../../TitleSections/TitleSections";
-import Project from "./components/Project/Project";
+import { spanishData } from "data";
+import { IListItems } from "interfaces/sections/navbar";
+import TitleSections from "components/TitleSections";
+import Project from "./components/Project";
 
 const Portfolio = ({ id }: IListItems) => {
   return (

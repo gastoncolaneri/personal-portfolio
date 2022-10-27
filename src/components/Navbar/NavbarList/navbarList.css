@@ -18,3 +18,7 @@
   color: var(--AQUA-GREEN-1);
   transition: 0.5s;
 }
+
+.selected {
+  color: var(--AQUA-GREEN-1);
+}

@@ -10,10 +10,10 @@ import LaunchIcon from "@mui/icons-material/Launch";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import LaptopWindowsIcon from "@mui/icons-material/LaptopWindows";
-import { IImageItem } from "../../../../../interfaces/sections/portfolioSection";
-import { spanishConstants } from "../../../../../utils/constants";
-import { srcset } from "../../../../../utils/setSource";
-import DialogProject from "../DialogProject/DialogProject";
+import { IImageItem } from "interfaces/sections/portfolio";
+import { spanishConstants } from "utils/constants";
+import { srcset } from "utils/setSource";
+import DialogProject from "components/Sections/Portfolio/components/DialogProject";
 
 import "./project.css";
 

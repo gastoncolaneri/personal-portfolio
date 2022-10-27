@@ -4,9 +4,9 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import emailjs from "@emailjs/browser";
 import { v4 as uuidv4 } from "uuid";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
-import { app } from "../../../../../utils/firebase";
-import { spanishConstants } from "../../../../../utils/constants";
-import { emailValidator } from "../../../../../utils/validators";
+import { app } from "utils/firebase";
+import { spanishConstants } from "utils/constants";
+import { emailValidator } from "utils/validators";
 
 import "./formContact.css";
 
@@ -42,7 +42,7 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
       );
   };
 
-  const sendEmail = () => {
+  const sendEmail = async () => {
     const personalTemplate = {
       name: nameInput,
       email: finalEmailInput,
@@ -50,9 +50,10 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
     };
     const externalTemplate = {
       name: nameInput,
+      email: finalEmailInput,
     };
-    configEmail("template_cxkbfpc", personalTemplate);
-    configEmail("template_2btheoc", externalTemplate);
+    await configEmail("template_cxkbfpc", personalTemplate);
+    await configEmail("template_2btheoc", externalTemplate);
   };
 
   const checkEmailInput = (data: string) => {

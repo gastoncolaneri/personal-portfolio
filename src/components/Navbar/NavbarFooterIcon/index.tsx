@@ -1,5 +1,5 @@
 import { IconButton, Tooltip } from "@mui/material";
-import { IFooterButtons } from "../../../interfaces/navbar/Footer";
+import { IFooterButtons } from "interfaces/sections/navbar";
 
 const NavbarFooterIcon = ({
   title,

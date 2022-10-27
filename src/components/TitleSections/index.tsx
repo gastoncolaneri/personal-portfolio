@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
-import { ITitleSections } from "../../interfaces/sections/titleSections";
-import { backTitleLayout, mainTitleLayout } from "../../utils/constants";
+import { ITitleSections } from "interfaces";
+import { backTitleLayout, mainTitleLayout } from "utils/constants";
 
 import "./titleSections.css";
 

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import Navbar from "../../components/Navbar";
-import CollapseNavbar from "../../components/Navbar/CollapseNavbar/CollapseNavbar";
+import Navbar from "components/Navbar";
+import CollapseNavbar from "components/Navbar/CollapseNavbar/CollapseNavbar";
 import {
   AboutMe,
   Contact,
@@ -8,8 +8,8 @@ import {
   Portfolio,
   Resume,
   Footer,
-} from "../../components/Sections";
-import { collapseNavbarLayout, navbarLayout } from "../../utils/constants";
+} from "components/Sections";
+import { collapseNavbarLayout, navbarLayout } from "utils/constants";
 
 import "./mainPage.css";
 
@@ -17,7 +17,7 @@ const MainPage = () => {
   return (
     <Box className="main__container">
       <Box className="left__block" sx={navbarLayout}>
-        <Navbar />
+        <Navbar customClassname="avatar__navbar" />
       </Box>
       <Box sx={collapseNavbarLayout}>
         <CollapseNavbar />

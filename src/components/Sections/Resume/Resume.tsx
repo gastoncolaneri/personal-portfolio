@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
-import { spanishData } from "../../../data/data";
-import { IListItems } from "../../../interfaces/navbar/listItems";
-import { sectionsLayout } from "../../../utils/constants";
-import DownloadButton from "../../DownloadButton";
-import TitleSections from "../../TitleSections/TitleSections";
+import { spanishData } from "data";
+import { IListItems } from "interfaces/sections/navbar";
+import { sectionsLayout } from "utils/constants";
+import DownloadButton from "components/DownloadButton";
+import TitleSections from "components/TitleSections";
 import CardList from "./components/CardList";
 import SkillsList from "./components/SkillsList";
 
@@ -18,8 +18,8 @@ const Resume = ({ id }: IListItems) => {
       />
       <div className="resume__container section__container">
         <Box className="d-flex space-between" sx={sectionsLayout}>
-          <CardList title="Educación" data={spanishData?.education} />
           <CardList title="Experiencia laboral" data={spanishData?.jobs} />
+          <CardList title="Educación" data={spanishData?.education} />
         </Box>
         <SkillsList data={spanishData?.skills} />
         <DownloadButton customClassname="button__skills" />
