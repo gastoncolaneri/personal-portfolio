@@ -54,7 +54,7 @@ code {
   margin-bottom: 30px !important;
 }
 
-.text-grey {
+.mr-5 .text-grey {
   color: var(--TEXT-5) !important;
 }
 
@@ -126,12 +126,15 @@ code {
 
 /** Media Queries **/
 
-/* @media (max-width: 599px) {
-  .text {
-    font-size: 14px !important;
+@media (max-width: 599px) {
+  .sections {
+    padding: 20px 30px;
   }
 }
 @media (min-width: 600px) and (max-width: 899px) {
+  .sections {
+    padding: 30px 40px;
+  }
 }
 @media (min-width: 900px) and (max-width: 1199px) {
 }
@@ -139,4 +142,4 @@ code {
 }
 
 @media (min-width: 1536px) {
-} */
+}

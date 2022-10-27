@@ -91,3 +91,9 @@ export const footerLayout = { padding: { xs: "15px", sm: "20px", md: "30px" } };
 export const normalText = { fontSize: { xs: "14px", md: "16px" } };
 
 export const normalTitle = { fontSize: { xs: "16px", md: "18px" } };
+
+export const roles = [
+  "Desarrollador de Software",
+  "Desarrollador Web",
+  "Desarollador Mobile",
+];

@@ -11,7 +11,15 @@ const Portfolio = ({ id }: IListItems) => {
         fadedTitle={spanishData?.navList[3].title}
         title={spanishData?.subNavList[2]}
       />
-      <ImageList gap={20} className="section__container" cols={3}>
+      <ImageList
+        gap={20}
+        className="section__container"
+        sx={{
+          display: { xs: "flex", sm: "grid" },
+          flexDirection: { xs: "column" },
+          gridTemplateColumns: { xs: "none", sm: "repeat(3, 1fr) !important" },
+        }}
+      >
         {spanishData?.portfolio.map((item, index) => (
           <Project item={item} index={index} />
         ))}
