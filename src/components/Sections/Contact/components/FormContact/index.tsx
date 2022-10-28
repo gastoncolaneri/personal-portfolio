@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { TextField, Typography } from "@mui/material";
+import { Grid, TextField, Typography } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
+import SendIcon from "@mui/icons-material/Send";
 import emailjs from "@emailjs/browser";
 import { v4 as uuidv4 } from "uuid";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
-import { app } from "../../../../../utils/firebase";
-import { spanishConstants } from "../../../../../utils/constants";
-import { emailValidator } from "../../../../../utils/validators";
+import { app } from "utils/firebase";
+import { spanishConstants, subtitles } from "utils/constants";
+import { emailValidator } from "utils/validators";
 
 import "./formContact.css";
 
@@ -42,7 +43,7 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
       );
   };
 
-  const sendEmail = () => {
+  const sendEmail = async () => {
     const personalTemplate = {
       name: nameInput,
       email: finalEmailInput,
@@ -50,9 +51,10 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
     };
     const externalTemplate = {
       name: nameInput,
+      email: finalEmailInput,
     };
-    configEmail("template_cxkbfpc", personalTemplate);
-    configEmail("template_2btheoc", externalTemplate);
+    await configEmail("template_cxkbfpc", personalTemplate);
+    await configEmail("template_2btheoc", externalTemplate);
   };
 
   const checkEmailInput = (data: string) => {
@@ -103,39 +105,45 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
   return (
     <form className="form__contact">
       <div className="d-flex mb-20">
-        <Typography variant="h5" className="text-white">
+        <Typography className="text-grey font-bolder" sx={subtitles}>
           {spanishConstants.contactTitle.message}
         </Typography>
       </div>
-      <div className="d-flex mb-20">
-        <TextField
-          required
-          id="outlined-required"
-          label={spanishConstants.contactLabels.name}
-          size="small"
-          className="name__input"
-          name="name"
-          fullWidth
-          value={nameInput}
-          onChange={(e) => setNameInput(e.target.value)}
-          error={errorName}
-          helperText={errorName && spanishConstants.errorHelpers.contact.name}
-        />
-        <TextField
-          required
-          id="outlined-required"
-          label={spanishConstants.contactLabels.email}
-          size="small"
-          className="email__input"
-          name="email"
-          type="email"
-          fullWidth
-          value={emailInput}
-          onChange={(e) => checkEmailInput(e.target.value)}
-          error={errorEmail}
-          helperText={errorEmail && spanishConstants.errorHelpers.contact.email}
-        />
-      </div>
+      <Grid container spacing={2} className="d-flex mb-20">
+        <Grid item xs={12} md={6}>
+          <TextField
+            required
+            id="outlined-required"
+            label={spanishConstants.contactLabels.name}
+            size="small"
+            className="name__input"
+            name="name"
+            fullWidth
+            value={nameInput}
+            onChange={(e) => setNameInput(e.target.value)}
+            error={errorName}
+            helperText={errorName && spanishConstants.errorHelpers.contact.name}
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            required
+            id="outlined-required"
+            label={spanishConstants.contactLabels.email}
+            size="small"
+            className="email__input"
+            name="email"
+            type="email"
+            fullWidth
+            value={emailInput}
+            onChange={(e) => checkEmailInput(e.target.value)}
+            error={errorEmail}
+            helperText={
+              errorEmail && spanishConstants.errorHelpers.contact.email
+            }
+          />
+        </Grid>
+      </Grid>
       <div className="d-flex mb-20">
         <TextField
           required
@@ -158,11 +166,11 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
       <div className="d-flex mb-20 justify-center">
         <LoadingButton
           variant="contained"
-          className="green__button button form-contact__button"
+          className="green__button button text-white"
           onClick={handleClick}
-          // disabled={isDisabled()}
           loading={isLoading}
-          loadingPosition="start"
+          loadingPosition="end"
+          endIcon={<SendIcon />}
         >
           {spanishConstants.buttonContact}
         </LoadingButton>

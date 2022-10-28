@@ -1,27 +1,16 @@
-.title__container {
-  justify-content: center;
-  position: relative;
-  display: flex;
-}
-
-.mainTitle {
+.fadedTitle {
   text-transform: uppercase;
   color: var(--TEXT-2);
   opacity: 0.1;
-  font-weight: 600 !important;
-  font-size: 9rem !important;
 }
 
-.backgroundTitle {
+.title {
   position: absolute;
   color: var(--TEXT-4);
-  font-weight: 600 !important;
   opacity: 0.9;
-  top: 25%;
   width: 100%;
   text-align: center;
-  font-size: 2.2rem !important;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
   background-image: linear-gradient(var(--AQUA-GREEN-1), var(--AQUA-GREEN-1));
   background-position: 50%;
   background-repeat: no-repeat;

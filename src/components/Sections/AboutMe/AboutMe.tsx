@@ -1,10 +1,10 @@
-import { Divider, Typography } from "@mui/material";
-import { spanishData } from "../../../data/data";
-import { IListItems } from "../../../interfaces/navbar/listItems";
-import TitleSections from "../../TitleSections/TitleSections";
-import DownloadButton from "../../DownloadButton";
+import { Box, Divider, Typography } from "@mui/material";
+import { spanishData } from "data";
+import TitleSections from "components/TitleSections";
+import DownloadButton from "components/DownloadButton";
+import { normalText, normalTitle, sectionsLayout } from "utils/constants";
+import { IListItems } from "interfaces/sections/navbar";
 
-import "../sections.css";
 import "./about.css";
 
 const AboutMe = ({ id }: IListItems) => {
@@ -13,40 +13,40 @@ const AboutMe = ({ id }: IListItems) => {
   return (
     <div id={id} className="sections background-1">
       <TitleSections
-        mainTitle={spanishData?.navList[1].title}
-        backgroundTitle={spanishData?.subNavList[0]}
+        fadedTitle={spanishData?.navList[1].title}
+        title={spanishData?.subNavList[0]}
       />
-      <div className="about__container section__container">
-        <div className="about__text">
-          <Typography variant="h4" className="mb-20 text-grey">
+      <Box className="d-flex section__container" sx={sectionsLayout}>
+        <div className="about__text w-100">
+          <Typography className="mb-20 text-grey" sx={normalTitle}>
             Soy
             <span className="text-green"> Gastón Colaneri</span>, un
             desarrollador de software.
           </Typography>
-          <Typography variant="h6" className="mb-20 text-grey">
+          <Typography className="mb-20 text-grey" sx={normalText}>
             Me considero una persona responsable, entusiasta y comprometida.
             Debido a mi experiencia académica y laboral, he adquirido excelentes
             habilidades organizativas y puedo desempeñarme eficientemente tanto
             de forma individual como formando parte de un equipo.
           </Typography>
-          <Typography variant="h6" className="text-grey">
+          <Typography className="text-grey" sx={normalText}>
             Me encanta aprender, disfruto superando desafíos y tengo un gran
             interés en seguir mejorando mis habilidades tecnológicas,
             aprendiendo y desarrollando mi carrera profesional como
             desarrollador de software.
           </Typography>
         </div>
-        <div className="info__container">
-          <div className="info__text">
-            <div>
+        <div className="info__container w-100">
+          <div className="space-between d-flex flex-column h-100 ">
+            <div className="mb-30">
               {personalData?.map((item, index) => {
                 return (
                   <div key={index}>
                     <div className="d-flex text-grey">
-                      <Typography variant="h6" className="info__label">
+                      <Typography sx={normalTitle} className="font-bolder mr-5">
                         {`${spanishData?.personalDataLabel[index]}:`}
                       </Typography>
-                      <Typography variant="h6"> {item}</Typography>
+                      <Typography sx={normalTitle}> {item}</Typography>
                     </div>
                     <Divider className="divider" />
                   </div>
@@ -56,7 +56,7 @@ const AboutMe = ({ id }: IListItems) => {
             <DownloadButton customClassname="green__button" />
           </div>
         </div>
-      </div>
+      </Box>
     </div>
   );
 };

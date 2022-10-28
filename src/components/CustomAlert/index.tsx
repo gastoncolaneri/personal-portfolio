@@ -1,5 +1,5 @@
 import { Snackbar, Alert } from "@mui/material";
-import { IAlertSuccess } from "../../interfaces/sections/contactSection";
+import { IAlertSuccess } from "interfaces/sections/contact";
 
 const CustomAlert = ({ open, onClose, type, message }: IAlertSuccess) => {
   return (

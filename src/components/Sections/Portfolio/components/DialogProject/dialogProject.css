@@ -1,69 +1,19 @@
-.dialog__container {
-  display: flex;
-  justify-content: center;
-}
-
 .MuiDialog-container {
-  max-width: 60%;
+  width: 60%;
 }
-
 .project__dialog {
   background-color: var(--BACKGROUND-2);
   color: var(--TEXT-5);
 }
 
-.dialog__content {
-  display: flex;
-}
-
-.dialog-title__container {
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  display: flex;
-  justify-content: flex-end;
-}
-
 .dialog__title {
   flex: 1;
   color: var(--TEXT-4);
-  font-size: 24px;
-}
-
-.dialog__button {
-  color: var(--TEXT-5) !important;
-  flex: 1;
 }
 
 .dialog__button:hover {
   transition: 0.5s;
   color: var(--TEXT-4) !important;
-}
-
-.image-dialog__container {
-  flex: 1;
-  align-items: center;
-  display: flex;
-  margin-right: 20px;
-  position: relative;
-}
-
-.dialog__image {
-  width: 100%;
-}
-
-.info__dialog {
-  flex: 1;
-}
-
-.section__title {
-  color: var(--TEXT-4);
-  font-size: 20px !important;
-  margin-bottom: 10px !important;
-}
-
-.project-info__container {
-  margin-bottom: 30px;
 }
 
 .carousel__button {
@@ -83,4 +33,10 @@
 
 .right__button {
   right: 15px;
+}
+
+.close__button:hover {
+  background-color: transparent;
+  color: var(--TEXT-4) !important;
+  transition: 0.3s linear;
 }

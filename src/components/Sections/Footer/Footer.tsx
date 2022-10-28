@@ -1,22 +1,25 @@
-import { spanishData } from "../../../data/data";
+import { Box } from "@mui/material";
+import { spanishData } from "data";
+import { footerLayout } from "utils/constants";
+
 import "./footer.css";
 
 const Footer = () => {
   return (
-    <div className="background-1 footer">
+    <Box className="background-1 footer" sx={footerLayout}>
       <p>
         Copyright © 2022
         <a
           href={spanishData?.socialNetworks?.linkedin}
           target="_blank"
           rel="noreferrer"
-          className="name__rights"
+          className="name__rights font-bolder"
         >
           Gastón Colaneri
         </a>
         . All Rights Reserved.
       </p>
-    </div>
+    </Box>
   );
 };
 

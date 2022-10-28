@@ -1,9 +1,9 @@
 import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import { spanishData } from "../../data/data";
-import { IDownloadButton } from "../../interfaces";
+import { spanishData } from "data";
+import { ICustomClassname } from "interfaces";
 
-const DownloadButton = ({ customClassname }: IDownloadButton) => {
+const DownloadButton = ({ customClassname }: ICustomClassname) => {
   return (
     <Button
       variant="contained"

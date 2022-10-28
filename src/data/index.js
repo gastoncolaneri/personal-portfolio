@@ -1,18 +1,18 @@
-import encontraMiMascotaImg from "../assets/encontra-mi-mascota.jpg";
-import encontraMiMascotaImg2 from "../assets/encontra-mi-mascota2.jpg";
-import encontraMiMascotaImg3 from "../assets/encontra-mi-mascota3.jpg";
+import encontraMiMascotaImg from "assets/encontra-mi-mascota.jpg";
+import encontraMiMascotaImg2 from "assets/encontra-mi-mascota2.jpg";
+import encontraMiMascotaImg3 from "assets/encontra-mi-mascota3.jpg";
 
-import fitnessImg from "../assets/fitness-style.jpg";
-import fitnessImg2 from "../assets/fitness-style2.jpg";
-import fitnessImg3 from "../assets/fitness-style3.jpg";
+import fitnessImg from "assets/fitness-style.jpg";
+import fitnessImg2 from "assets/fitness-style2.jpg";
+import fitnessImg3 from "assets/fitness-style3.jpg";
 
-import wolfGamesImg from "../assets/wolf-games.jpg";
-import wolfGamesImg2 from "../assets/wolf-games2.jpg";
-import wolfGamesImg3 from "../assets/wolf-games3.jpg";
+import wolfGamesImg from "assets/wolf-games.jpg";
+import wolfGamesImg2 from "assets/wolf-games2.jpg";
+import wolfGamesImg3 from "assets/wolf-games3.jpg";
 
-import weatherAppImg from "../assets/weather-query.jpg";
-import weatherAppImg2 from "../assets/weather-query2.jpg";
-import weatherAppImg3 from "../assets/weather-query3.jpg";
+import weatherAppImg from "assets/weather-query.jpg";
+import weatherAppImg2 from "assets/weather-query2.jpg";
+import weatherAppImg3 from "assets/weather-query3.jpg";
 
 const personalData = ["Gastón Colaneri", 27, "Valencia, España"];
 const portfolio = [
@@ -109,12 +109,7 @@ export const spanishData = {
     { title: "Proyectos", id: "portfolio" },
     { title: "Contacto", id: "contact" },
   ],
-  subNavList: [
-    "Conoceme",
-    "Mis conocimientos",
-    "Mis trabajos",
-    "Ponete en contacto",
-  ],
+  subNavList: ["Conoceme", "Mis conocimientos", "Mis trabajos", "Contactame"],
 
   socialNetworks: {
     linkedin: "https://www.linkedin.com/in/cgastoncolaneri/",

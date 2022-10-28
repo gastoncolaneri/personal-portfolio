@@ -1,27 +1,9 @@
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import { spanishData } from "../../../data/data";
-
-import "./navbarFooter.css";
-import NavbarFooterIcon from "../NavbarFooterIcon/NavbarFooterIcon";
+import SocialNetworkIcons from "components/Navbar/SocialNetworkIcons";
 
 const NavbarFooter = () => {
   return (
-    <div className="navbar__footer icon__footer">
-      <NavbarFooterIcon
-        title="LinkedIn"
-        href={spanishData?.socialNetworks?.linkedin}
-        iconClassName="icon__footer"
-      >
-        <LinkedInIcon />
-      </NavbarFooterIcon>
-      <NavbarFooterIcon
-        title="GitHub"
-        href={spanishData?.socialNetworks?.github}
-        iconClassName="icon__footer"
-      >
-        <GitHubIcon />
-      </NavbarFooterIcon>
+    <div className="d-flex justify-center">
+      <SocialNetworkIcons />
     </div>
   );
 };

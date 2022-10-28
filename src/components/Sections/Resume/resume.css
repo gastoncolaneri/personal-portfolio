@@ -1,8 +1,3 @@
-.resume__container {
-  display: flex;
-  flex-direction: column;
-}
-
 .button__skills {
   background-color: var(--BACKGROUND-2) !important;
   color: var(--TEXT-3) !important;

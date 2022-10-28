@@ -10,10 +10,10 @@ import LaunchIcon from "@mui/icons-material/Launch";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import LaptopWindowsIcon from "@mui/icons-material/LaptopWindows";
-import { IImageItem } from "../../../../../interfaces/sections/portfolioSection";
-import { spanishConstants } from "../../../../../utils/constants";
-import { srcset } from "../../../../../utils/setSource";
-import DialogProject from "../DialogProject/DialogProject";
+import { IImageItem } from "interfaces/sections/portfolio";
+import { spanishConstants } from "utils/constants";
+import { srcset } from "utils/setSource";
+import DialogProject from "components/Sections/Portfolio/components/DialogProject";
 
 import "./project.css";
 
@@ -21,7 +21,6 @@ const Project = ({ item, index }: IImageItem) => {
   const [showInfo, setShowInfo] = useState([false, false, false, false]);
   const [showDialog, setShowDialog] = useState(false);
   const tooltipText = spanishConstants.tooltipButtonPortfolio;
-  const { projectType } = spanishConstants;
 
   const handleHover = (index: number) => {
     const tmpList = showInfo.map((item, idx) => {
@@ -53,7 +52,9 @@ const Project = ({ item, index }: IImageItem) => {
         />
         {showInfo[index] && (
           <div className="overlay__imagen">
-            <Typography className="overlay__title">{item?.name}</Typography>
+            <Typography className="d-flex justify-center align-center mr-10 font-bolder">
+              {item?.name}
+            </Typography>
             {item?.isApp ? <PhoneIphoneIcon /> : <LaptopWindowsIcon />}
           </div>
         )}

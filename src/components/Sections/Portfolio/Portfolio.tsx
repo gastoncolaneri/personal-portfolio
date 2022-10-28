@@ -1,19 +1,20 @@
 import { ImageList } from "@mui/material";
-import { spanishData } from "../../../data/data";
-import { IListItems } from "../../../interfaces/navbar/listItems";
-import TitleSections from "../../TitleSections/TitleSections";
-import Project from "./components/Project/Project";
+import { spanishData } from "data";
+import { IListItems } from "interfaces/sections/navbar";
+import TitleSections from "components/TitleSections";
+import Project from "./components/Project";
+import { portfolioLayout } from "utils/constants";
 
 const Portfolio = ({ id }: IListItems) => {
   return (
     <div id={id} className="sections background-1">
       <TitleSections
-        mainTitle={spanishData?.navList[3].title}
-        backgroundTitle={spanishData?.subNavList[2]}
+        fadedTitle={spanishData?.navList[3].title}
+        title={spanishData?.subNavList[2]}
       />
-      <ImageList gap={20} className="section__container" cols={3}>
+      <ImageList gap={20} className="section__container" sx={portfolioLayout}>
         {spanishData?.portfolio.map((item, index) => (
-          <Project item={item} index={index} />
+          <Project item={item} index={index} key={item?.name} />
         ))}
       </ImageList>
     </div>
