@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AppBar, Box, Drawer, IconButton, Toolbar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Navbar from "components/Navbar";
+import SocialNetworkIcons from "components/Navbar/SocialNetworkIcons";
 
 const CollapseNavbar = () => {
   const [isOpenDrawer, setIsOpenDrawer] = useState<boolean>(false);
@@ -11,9 +12,9 @@ const CollapseNavbar = () => {
   };
 
   return (
-    <Box className="w-100" >
+    <Box className="w-100">
       <AppBar position="fixed" color="secondary" className="navbar-collapse">
-        <Toolbar>
+        <Toolbar className="d-flex space-between">
           <IconButton
             size="large"
             edge="start"
@@ -24,6 +25,7 @@ const CollapseNavbar = () => {
           >
             <MenuIcon />
           </IconButton>
+          <SocialNetworkIcons />
         </Toolbar>
       </AppBar>
       <Drawer

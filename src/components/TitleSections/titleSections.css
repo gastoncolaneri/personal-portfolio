@@ -1,9 +1,3 @@
-.title__container {
-  justify-content: center;
-  position: relative;
-  display: flex;
-}
-
 .fadedTitle {
   text-transform: uppercase;
   color: var(--TEXT-2);

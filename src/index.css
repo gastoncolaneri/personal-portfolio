@@ -13,6 +13,7 @@
   --AQUA-GREEN-2: #198f6c;
   --WHITE: #ffffff;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -23,10 +24,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif !important;
-}
-
-:target {
-  scroll-margin-top: 72px !important;
+  scroll-behavior: smooth !important;
 }
 
 input,
@@ -90,6 +88,10 @@ code {
   font-weight: 600 !important;
 }
 
+.relative {
+  position: relative;
+}
+
 .d-flex {
   display: flex !important;
 }
@@ -104,6 +106,10 @@ code {
 
 .justify-start {
   justify-content: flex-start !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
 }
 
 .space-between {
@@ -151,12 +157,12 @@ code {
 }
 
 .green__button {
-  background-color: var(--AQUA-GREEN-1) !important;
-  color: var(--TEXT-0);
+  background-color: var(--AQUA-GREEN-2) !important;
+  color: var(--TEXT-4) !important;
 }
 
 .green__button:hover {
-  background-color: var(--AQUA-GREEN-2) !important;
+  background-color: var(--AQUA-GREEN-1) !important;
   transition: 0.5s;
 }
 
@@ -187,8 +193,8 @@ code {
 }
 .avatar__navbar-collapse {
   border: 1px solid var(--TEXT-1);
-  width: 100px !important;
-  height: 100px !important;
+  width: 120px !important;
+  height: 120px !important;
 }
 
 /** Media Queries **/
@@ -197,13 +203,28 @@ code {
   .sections {
     padding: 20px 30px;
   }
+  :target {
+    scroll-margin-top: 72px !important;
+  }
+  .MuiDialog-container {
+    width: 100%;
+  }
 }
 @media (min-width: 600px) and (max-width: 899px) {
   .sections {
     padding: 30px 40px;
   }
+  :target {
+    scroll-margin-top: 72px !important;
+  }
+  .MuiDialog-container {
+    width: 70%;
+  }
 }
 @media (min-width: 900px) and (max-width: 1199px) {
+  .sections {
+    padding: 30px 40px;
+  }
 }
 @media (min-width: 1200px) and (max-width: 1535px) {
 }

@@ -33,7 +33,7 @@ const Home = ({ id }: IListItems) => {
   };
 
   return (
-    <div id={id} className="container">
+    <div id={id} className="relative d-flex justify-center align-center">
       <CardMedia
         component="img"
         image={require("assets/backgroundGif.gif")}

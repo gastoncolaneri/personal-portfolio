@@ -18,3 +18,17 @@
   height: 100%;
   overflow-y: auto;
 }
+
+.fab__button {
+  position: absolute !important;
+  bottom: 30px !important;
+  right: 40px !important;
+  background-color: var(--AQUA-GREEN-2) !important;
+  color: var(--TEXT-4) !important;
+  transition: 0.5s linear;
+}
+
+.fab__button:hover {
+  background-color: var(--AQUA-GREEN-1) !important;
+  transition: 0.5s linear;
+}

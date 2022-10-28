@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Grid, TextField, Typography } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
+import SendIcon from "@mui/icons-material/Send";
 import emailjs from "@emailjs/browser";
 import { v4 as uuidv4 } from "uuid";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
@@ -167,9 +168,9 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
           variant="contained"
           className="green__button button text-white"
           onClick={handleClick}
-          // disabled={isDisabled()}
           loading={isLoading}
-          loadingPosition="start"
+          loadingPosition="end"
+          endIcon={<SendIcon />}
         >
           {spanishConstants.buttonContact}
         </LoadingButton>

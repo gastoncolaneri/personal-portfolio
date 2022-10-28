@@ -12,6 +12,9 @@ export const spanishConstants = {
     projectDetails: "Detalles del proyecto",
     type: "Tipo del proyecto",
     tools: "Herramientas",
+    apk: "APK",
+    github: "GitHub",
+    url: "URL",
   },
   contactTitle: {
     address: "Ubicación",
@@ -42,11 +45,18 @@ export const navbarLayout = { display: { xs: "none", md: "flex" } };
 export const collapseNavbarLayout = { display: { xs: "flex", md: "none" } };
 
 export const sectionsLayout = {
-  flexDirection: { xs: "column", sm: "column", md: "column", lg: "row" },
+  flexDirection: { xs: "column", lg: "row" },
 };
 export const contactLayout = {
-  flexDirection: { xs: "column", sm: "row", md: "row", lg: "row" },
+  flexDirection: { xs: "column", sm: "row" },
 };
+
+export const skillsLayout = { flexDirection: { xs: "column", sm: "row" } };
+
+export const modalLayout = { flexDirection: { xs: "column", lg: "row" } };
+
+export const footerLayout = { padding: { xs: "15px", sm: "20px", md: "30px" } };
+
 export const backTitleLayout = {
   fontSize: {
     xs: "3rem",
@@ -64,9 +74,9 @@ export const mainTitleLayout = {
   },
   top: { xs: "25%", sm: "30%" },
   paddingBottom: {
-    xs: "30px",
-    md: "40px",
-    lg: "50px",
+    xs: "35px",
+    md: "45px",
+    lg: "60px",
   },
 };
 
@@ -77,6 +87,20 @@ export const resumeLayout = {
   },
 };
 
+export const homeLayout = {
+  width: { xs: "80%", md: "80%", xl: "60%" },
+};
+
+export const portfolioLayout = {
+  display: { xs: "flex", md: "grid" },
+  flexDirection: { xs: "column" },
+  gridTemplateColumns: { xs: "none", sm: "repeat(3, 1fr) !important" },
+};
+
+export const imageModalLayout = {
+  marginRight: { xs: "0px", lg: "15px" },
+  marginBottom: { xs: "15px", lg: "0px" },
+};
 export const subtitles = {
   fontSize: {
     xs: "1.2rem",
@@ -84,17 +108,11 @@ export const subtitles = {
   },
 };
 
-export const skillsLayout = { flexDirection: { xs: "column", sm: "row" } };
-
-export const footerLayout = { padding: { xs: "15px", sm: "20px", md: "30px" } };
-
 export const normalText = { fontSize: { xs: "14px", md: "16px" } };
 
 export const normalTitle = { fontSize: { xs: "16px", md: "18px" } };
 
-export const homeLayout = {
-  width: { xs: "80%", md: "80%", xl: "60%" },
-};
+export const modalTitle = { fontSize: { xs: "18px", md: "22px", lg: "24px" } };
 
 export const roles = [
   "Gastón Colaneri.",

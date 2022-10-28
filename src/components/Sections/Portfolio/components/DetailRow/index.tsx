@@ -1,5 +1,5 @@
 import { Divider, Typography, Tooltip } from "@mui/material";
-import { spanishConstants } from "../../../../../utils/constants";
+import { spanishConstants, normalText } from "utils/constants";
 
 import "./detailRow.css";
 
@@ -14,11 +14,11 @@ const DetailRow = ({ title, data }: IDetailRow) => {
 
   return (
     <>
-      <div className="d-flex align-end">
-        <Typography className="text-white mr-10 font-bolder">
-          {title}:{" "}
+      <div className="d-flex">
+        <Typography className="text-white mr-5 font-bolder" sx={normalText}>
+          {title}:
         </Typography>
-        <Typography className="row__data">
+        <Typography className="row__data" sx={normalText}>
           {isLink ? (
             <Tooltip
               title={isAPK ? tooltipText.app : tooltipText.web}

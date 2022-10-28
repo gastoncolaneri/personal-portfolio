@@ -1,4 +1,5 @@
-import { Box } from "@mui/material";
+import { Box, Fab } from "@mui/material";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import Navbar from "components/Navbar";
 import {
   AboutMe,
@@ -8,6 +9,7 @@ import {
   Resume,
   Footer,
 } from "components/Sections";
+
 import { navbarLayout } from "utils/constants";
 
 import "./mainPage.css";
@@ -26,6 +28,9 @@ const MainPage = () => {
         <Portfolio id="portfolio" />
         <Contact id="contact" />
         <Footer />
+        <Fab aria-label="top" className="fab__button" href={"#home"}>
+          <ArrowUpwardIcon />
+        </Fab>
       </Box>
     </Box>
   );

@@ -3,6 +3,7 @@ import { spanishData } from "data";
 import { IListItems } from "interfaces/sections/navbar";
 import TitleSections from "components/TitleSections";
 import Project from "./components/Project";
+import { portfolioLayout } from "utils/constants";
 
 const Portfolio = ({ id }: IListItems) => {
   return (
@@ -11,17 +12,9 @@ const Portfolio = ({ id }: IListItems) => {
         fadedTitle={spanishData?.navList[3].title}
         title={spanishData?.subNavList[2]}
       />
-      <ImageList
-        gap={20}
-        className="section__container"
-        sx={{
-          display: { xs: "flex", sm: "grid" },
-          flexDirection: { xs: "column" },
-          gridTemplateColumns: { xs: "none", sm: "repeat(3, 1fr) !important" },
-        }}
-      >
+      <ImageList gap={20} className="section__container" sx={portfolioLayout}>
         {spanishData?.portfolio.map((item, index) => (
-          <Project item={item} index={index} />
+          <Project item={item} index={index} key={item?.name} />
         ))}
       </ImageList>
     </div>

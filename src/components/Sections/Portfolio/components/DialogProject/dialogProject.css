@@ -1,42 +1,19 @@
 .MuiDialog-container {
-  max-width: 60%;
+  width: 60%;
 }
-
 .project__dialog {
   background-color: var(--BACKGROUND-2);
   color: var(--TEXT-5);
 }
 
-.dialog-title__container {
-  font-size: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: flex-end;
-}
-
 .dialog__title {
   flex: 1;
   color: var(--TEXT-4);
-  font-size: 24px;
 }
 
 .dialog__button:hover {
   transition: 0.5s;
   color: var(--TEXT-4) !important;
-}
-
-.image-dialog__container {
-  flex: 1;
-  align-items: center;
-  display: flex;
-  margin-right: 20px;
-  position: relative;
-}
-
-.section__title {
-  color: var(--TEXT-4);
-  font-size: 20px !important;
-  margin-bottom: 10px !important;
 }
 
 .carousel__button {
@@ -56,4 +33,10 @@
 
 .right__button {
   right: 15px;
+}
+
+.close__button:hover {
+  background-color: transparent;
+  color: var(--TEXT-4) !important;
+  transition: 0.3s linear;
 }

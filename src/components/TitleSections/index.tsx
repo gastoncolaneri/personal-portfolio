@@ -6,7 +6,7 @@ import "./titleSections.css";
 
 const TitleSections = ({ title, fadedTitle }: ITitleSections) => {
   return (
-    <div className="title__container">
+    <div className="d-flex relative justify-center">
       <Typography className="title font-bolder" sx={mainTitleLayout}>
         {title}
       </Typography>

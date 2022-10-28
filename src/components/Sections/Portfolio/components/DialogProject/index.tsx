@@ -5,12 +5,22 @@ import {
   DialogContent,
   IconButton,
   Typography,
+  Box,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import { IItemData } from "interfaces/sections/portfolio";
-import { spanishConstants } from "utils/constants";
+import {
+  imageModalLayout,
+  modalLayout,
+  modalTitle,
+  normalText,
+  normalTitle,
+  spanishConstants,
+} from "utils/constants";
 import DetailRow from "components/Sections/Portfolio/components/DetailRow";
 
 import "./dialogProject.css";
@@ -22,6 +32,9 @@ interface IDialogProject {
 }
 
 const DialogProject = ({ data, isOpen, setIsOpen }: IDialogProject) => {
+  const typeText = spanishConstants.modalTitles;
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
   const [indexImg, setIndexImg] = useState(0);
   const toolsUsed = data?.tools.join(", ");
   const type = data?.isApp
@@ -49,21 +62,27 @@ const DialogProject = ({ data, isOpen, setIsOpen }: IDialogProject) => {
     <Dialog
       onClose={handleClose}
       open={isOpen}
-      maxWidth="xl"
-      className="d-flex justify-center "
+      fullScreen={fullScreen}
+      className="d-flex justify-center"
+      PaperProps={{ style: { maxWidth: "100%", margin: 0 } }}
     >
-      <DialogTitle className="project__dialog dialog-title__container font-bolder">
-        <div className="dialog__title">{data?.name}</div>
+      <DialogTitle className="project__dialog justify-end d-flex align-center">
+        <Typography className="dialog__title font-bolder" sx={modalTitle}>
+          {data?.name}
+        </Typography>
         <IconButton
           aria-label="close"
           onClick={handleClose}
-          className="text-grey flex-1"
+          className="text-grey justify-end close__button"
         >
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent className="project__dialog d-flex">
-        <div className="image-dialog__container">
+      <DialogContent className="project__dialog d-flex" sx={modalLayout}>
+        <Box
+          className="relative d-flex flex-1 align-center"
+          sx={imageModalLayout}
+        >
           <img
             alt={data?.name}
             loading="lazy"
@@ -84,29 +103,34 @@ const DialogProject = ({ data, isOpen, setIsOpen }: IDialogProject) => {
           >
             <ChevronRightIcon />
           </IconButton>
-        </div>
+        </Box>
         <div className="flex-1">
           <div className="mb-30">
-            <Typography className="section__title">
-              {spanishConstants.modalTitles.projectInfo}
+            <Typography
+              className="mb-10 text-white font-bolder"
+              sx={normalTitle}
+            >
+              {typeText.projectInfo}
             </Typography>
-            <div className="info__text">{data?.spanishDescription}</div>
+            <Typography sx={normalText} className="space-break">
+              {data?.spanishDescription}
+            </Typography>
           </div>
           <div>
-            <Typography className="section__title">
-              {spanishConstants.modalTitles.projectDetails}
+            <Typography
+              className="mb-10 text-white font-bolder"
+              sx={normalTitle}
+            >
+              {typeText.projectDetails}
             </Typography>
-            <DetailRow
-              title={spanishConstants.modalTitles.tools}
-              data={toolsUsed}
-            />
-            <DetailRow title={spanishConstants.modalTitles.type} data={type} />
+            <DetailRow title={typeText.tools} data={toolsUsed} />
+            <DetailRow title={typeText.type} data={type} />
             {data?.isApp ? (
-              <DetailRow title="APK" data={data?.web} />
+              <DetailRow title={typeText.apk} data={data?.web} />
             ) : (
-              <DetailRow title="URL" data={data?.web} />
+              <DetailRow title={typeText.url} data={data?.web} />
             )}
-            <DetailRow title="GitHub" data={data?.github} />
+            <DetailRow title={typeText.github} data={data?.github} />
           </div>
         </div>
       </DialogContent>

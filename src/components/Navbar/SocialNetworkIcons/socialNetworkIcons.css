@@ -1,0 +1,4 @@
+.icon__footer:hover svg {
+  color: var(--AQUA-GREEN-1) !important;
+  transition: 0.3s linear;
+}
