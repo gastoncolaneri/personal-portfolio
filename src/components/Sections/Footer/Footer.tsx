@@ -13,7 +13,7 @@ const Footer = () => {
           href={spanishData?.socialNetworks?.linkedin}
           target="_blank"
           rel="noreferrer"
-          className="name__rights"
+          className="name__rights font-bolder"
         >
           Gastón Colaneri
         </a>

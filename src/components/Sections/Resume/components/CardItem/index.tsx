@@ -14,7 +14,7 @@ const CardItem = ({ data }: ICardItem) => {
             key={`
           ${item?.place}`}
           >
-            <Typography className="name__item" sx={normalTitle}>
+            <Typography className="name__item font-bolder" sx={normalTitle}>
               {item?.name}
             </Typography>
             <Typography className="place__item" sx={normalTitle}>
@@ -22,11 +22,11 @@ const CardItem = ({ data }: ICardItem) => {
                 {item?.place}
               </a>
             </Typography>
-            <Box className="date__item" sx={normalText}>
+            <Box className="date__item font-bolder" sx={normalText}>
               {item?.dates?.start} - {item?.dates?.end}
             </Box>
             {item?.description && (
-              <Typography className="description__item" sx={normalText}>
+              <Typography className="text-grey" sx={normalText}>
                 {item?.description}
               </Typography>
             )}

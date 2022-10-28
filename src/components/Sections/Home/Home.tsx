@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { CardMedia, Typography } from "@mui/material";
+import { CardMedia, Typography, Box } from "@mui/material";
 import Typewriter from "typewriter-effect";
 import { IListItems } from "interfaces/sections/navbar";
-import { roles } from "utils/constants";
+import { homeLayout, roles } from "utils/constants";
 
 import "./home.css";
 
@@ -21,12 +21,13 @@ const Home = ({ id }: IListItems) => {
       .typeString(roles[0])
       .pauseFor(1500)
       .deleteAll()
-      .pauseFor(500)
       .typeString(roles[1])
       .pauseFor(1500)
       .deleteAll()
-      .pauseFor(500)
       .typeString(roles[2])
+      .pauseFor(1500)
+      .deleteAll()
+      .typeString(roles[3])
       .pauseFor(1500)
       .start();
   };
@@ -38,14 +39,15 @@ const Home = ({ id }: IListItems) => {
         image={require("assets/backgroundGif.gif")}
         className="background__home"
       />
-      <div className="text__container">
-        <Typography variant="h4" className="mb-20">
+      <Box className="text__container" sx={homeLayout}>
+        <Typography variant="h5" className="mb-20">
           Bienvenido!
         </Typography>
-        <Typography variant="h2" className="mb-20">
-          Mi nombre es Gastón Colaneri
-        </Typography>
-        <div>
+        <Box
+          className="d-flex align-center justify-center"
+          sx={{ flexDirection: { xs: "column", sm: "row" } }}
+        >
+          <span className="mr-10 home__text">Soy</span>
           <Typewriter
             onInit={typeWriterInit}
             options={{
@@ -54,15 +56,8 @@ const Home = ({ id }: IListItems) => {
               delay: 80,
             }}
           />
-        </div>
-
-        {/* <div className="typewritter__container mb-20">
-          <Typography variant="h4">
-            Soy{" "}
-            <span className="typewritter__text">desarrollador de software</span>
-          </Typography>
-        </div> */}
-      </div>
+        </Box>
+      </Box>
     </div>
   );
 };

@@ -77,10 +77,10 @@ export const resumeLayout = {
   },
 };
 
-export const resumeTitles = {
+export const subtitles = {
   fontSize: {
-    xs: "1.5rem",
-    md: "2rem",
+    xs: "1.2rem",
+    md: "1.5rem",
   },
 };
 
@@ -92,8 +92,13 @@ export const normalText = { fontSize: { xs: "14px", md: "16px" } };
 
 export const normalTitle = { fontSize: { xs: "16px", md: "18px" } };
 
+export const homeLayout = {
+  width: { xs: "80%", md: "80%", xl: "60%" },
+};
+
 export const roles = [
-  "Desarrollador de Software",
-  "Desarrollador Web",
-  "Desarollador Mobile",
+  "Gastón Colaneri.",
+  "desarrollador de Software.",
+  "desarrollador Web.",
+  "desarollador Mobile.",
 ];

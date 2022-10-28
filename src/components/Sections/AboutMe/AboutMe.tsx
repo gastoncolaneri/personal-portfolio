@@ -16,7 +16,7 @@ const AboutMe = ({ id }: IListItems) => {
         fadedTitle={spanishData?.navList[1].title}
         title={spanishData?.subNavList[0]}
       />
-      <Box className="about__container section__container" sx={sectionsLayout}>
+      <Box className="d-flex section__container" sx={sectionsLayout}>
         <div className="about__text w-100">
           <Typography className="mb-20 text-grey" sx={normalTitle}>
             Soy
@@ -37,13 +37,13 @@ const AboutMe = ({ id }: IListItems) => {
           </Typography>
         </div>
         <div className="info__container w-100">
-          <div className="info__text">
+          <div className="space-between d-flex flex-column h-100 ">
             <div className="mb-30">
               {personalData?.map((item, index) => {
                 return (
                   <div key={index}>
                     <div className="d-flex text-grey">
-                      <Typography sx={normalTitle} className="info__label">
+                      <Typography sx={normalTitle} className="font-bolder mr-5">
                         {`${spanishData?.personalDataLabel[index]}:`}
                       </Typography>
                       <Typography sx={normalTitle}> {item}</Typography>

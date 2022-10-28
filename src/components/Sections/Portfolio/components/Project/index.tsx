@@ -52,7 +52,9 @@ const Project = ({ item, index }: IImageItem) => {
         />
         {showInfo[index] && (
           <div className="overlay__imagen">
-            <Typography className="overlay__title">{item?.name}</Typography>
+            <Typography className="d-flex justify-center align-center mr-10 font-bolder">
+              {item?.name}
+            </Typography>
             {item?.isApp ? <PhoneIphoneIcon /> : <LaptopWindowsIcon />}
           </div>
         )}

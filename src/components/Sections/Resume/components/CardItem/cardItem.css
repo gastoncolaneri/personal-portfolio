@@ -13,13 +13,11 @@
   justify-content: center;
   color: var(--TEXT-5);
   margin-bottom: 10px !important;
-  font-weight: 700;
   width: 170px;
 }
 .name__item {
   color: var(--TEXT-5);
   margin-bottom: 10px !important;
-  font-weight: 600 !important;
   max-width: 350px;
 }
 
@@ -35,8 +33,4 @@
 
 .place__item a:hover {
   color: var(--AQUA-GREEN-2);
-}
-
-.description__item {
-  color: var(--TEXT-5);
 }

@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import { v4 as uuidv4 } from "uuid";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { app } from "utils/firebase";
-import { spanishConstants } from "utils/constants";
+import { spanishConstants, subtitles } from "utils/constants";
 import { emailValidator } from "utils/validators";
 
 import "./formContact.css";
@@ -104,7 +104,7 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
   return (
     <form className="form__contact">
       <div className="d-flex mb-20">
-        <Typography variant="h5" className="text-white">
+        <Typography className="text-grey font-bolder" sx={subtitles}>
           {spanishConstants.contactTitle.message}
         </Typography>
       </div>
@@ -165,7 +165,7 @@ const FormContact = ({ openSuccessAlert, openErrorAlert }: IFormContact) => {
       <div className="d-flex mb-20 justify-center">
         <LoadingButton
           variant="contained"
-          className="green__button button form-contact__button"
+          className="green__button button text-white"
           onClick={handleClick}
           // disabled={isDisabled()}
           loading={isLoading}

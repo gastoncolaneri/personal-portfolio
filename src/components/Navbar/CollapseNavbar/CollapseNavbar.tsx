@@ -11,8 +11,8 @@ const CollapseNavbar = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" color="secondary">
+    <Box className="w-100" >
+      <AppBar position="fixed" color="secondary" className="navbar-collapse">
         <Toolbar>
           <IconButton
             size="large"

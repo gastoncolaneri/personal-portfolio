@@ -9,10 +9,10 @@ const ItemSkill = ({ name, number }: IItemSkill) => {
       <div className="w-100">
         <div
           className="
-        item-label__container"
+        d-flex space-between w-100 flex-1 mb-10 text-grey"
         >
-          <Typography className="item__label">{name}</Typography>
-          <Typography className="item__label">{number}%</Typography>
+          <Typography className="item__label font-bolder">{name}</Typography>
+          <Typography className="item__label font-bolder">{number}%</Typography>
         </div>
         <LinearProgress
           variant="determinate"

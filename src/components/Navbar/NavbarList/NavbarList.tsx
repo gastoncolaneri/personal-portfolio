@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 import { spanishData } from "data";
@@ -34,7 +34,7 @@ const NavbarList = ({ setIsOpenDrawer }: INavbarList) => {
 
   return (
     <Router>
-      <nav className="navbar__list">
+      <nav className="d-flex flex-column justify-center align-center">
         {spanishData?.navList.map((item, index) => {
           return (
             <Link
@@ -42,8 +42,13 @@ const NavbarList = ({ setIsOpenDrawer }: INavbarList) => {
               onClick={() => {
                 setIsOpenDrawer && setIsOpenDrawer(false);
                 setItemSelected(index);
+                console.log(window.location.hash);
+                window.location.hash = `#${item?.id}`;
+                console.log(window.location.hash);
               }}
-              className={`navbar__item ${itemSelected === index && "selected"}`}
+              className={`navbar__item text-grey mb-30 font-bolder ${
+                itemSelected === index && "text-green"
+              }`}
               smooth
               key={item?.id}
             >

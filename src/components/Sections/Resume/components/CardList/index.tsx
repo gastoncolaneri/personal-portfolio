@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { ICardList } from "interfaces/sections/resume";
-import { resumeLayout, resumeTitles } from "utils/constants";
+import { resumeLayout, subtitles } from "utils/constants";
 import CardItem from "components/Sections/Resume/components/CardItem";
 
 import "./cardList.css";
@@ -8,7 +8,7 @@ import "./cardList.css";
 const CardList = ({ title, data }: ICardList) => {
   return (
     <Box className="list__container" sx={resumeLayout}>
-      <Typography className="card__title mb-20" sx={resumeTitles}>
+      <Typography className="font-bolder mb-20 text-grey" sx={subtitles}>
         {title}
       </Typography>
       <div>

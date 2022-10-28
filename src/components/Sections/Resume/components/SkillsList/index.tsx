@@ -1,6 +1,6 @@
 import { Typography, Box } from "@mui/material";
 import { ISkillsList } from "interfaces/sections/resume";
-import { resumeTitles, skillsLayout } from "utils/constants";
+import { subtitles, skillsLayout } from "utils/constants";
 import ItemSkill from "components/Sections/Resume/components/SkillItem";
 
 import "./skillsList.css";
@@ -8,7 +8,7 @@ import "./skillsList.css";
 const SkillsList = ({ data }: ISkillsList) => {
   return (
     <Box className="mb-20">
-      <Typography className="card__title mb-20" sx={resumeTitles}>
+      <Typography className="font-bolder mb-20 text-grey" sx={subtitles}>
         Habilidades
       </Typography>
       <Box className="skills__container" sx={skillsLayout}>

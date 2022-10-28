@@ -7,10 +7,10 @@ import "./titleSections.css";
 const TitleSections = ({ title, fadedTitle }: ITitleSections) => {
   return (
     <div className="title__container">
-      <Typography className="title" sx={mainTitleLayout}>
+      <Typography className="title font-bolder" sx={mainTitleLayout}>
         {title}
       </Typography>
-      <Typography className="fadedTitle" sx={backTitleLayout}>
+      <Typography className="fadedTitle font-bolder" sx={backTitleLayout}>
         {fadedTitle}
       </Typography>
     </div>

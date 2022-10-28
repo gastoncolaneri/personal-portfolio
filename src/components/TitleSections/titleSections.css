@@ -8,13 +8,11 @@
   text-transform: uppercase;
   color: var(--TEXT-2);
   opacity: 0.1;
-  font-weight: 600 !important;
 }
 
 .title {
   position: absolute;
   color: var(--TEXT-4);
-  font-weight: 600 !important;
   opacity: 0.9;
   width: 100%;
   text-align: center;

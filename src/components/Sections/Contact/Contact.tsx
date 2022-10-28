@@ -9,7 +9,7 @@ import { IListItems } from "interfaces/sections/navbar";
 import TitleSections from "components/TitleSections";
 import CustomAlert from "components/CustomAlert";
 import FormContact from "components/Sections/Contact/components/FormContact";
-import { contactLayout, spanishConstants } from "utils/constants";
+import { contactLayout, spanishConstants, subtitles } from "utils/constants";
 import { spanishData } from "data";
 
 import "./contact.css";
@@ -25,20 +25,17 @@ const Contact = ({ id }: IListItems) => {
 
   const onCloseSuccess = () => setIsOpenSuccessAlert(false);
   const onCloseError = () => setIsOpenErrorAlert(false);
-
+  console.log(id);
   return (
     <div id={id} className="sections background-2">
       <TitleSections
         fadedTitle={spanishData?.navList[4].title}
         title={spanishData?.subNavList[3]}
       />
-      <Box className="section__container contact__container" sx={contactLayout}>
-        <div className="info-contact__container">
-          <div className="d-flex flex-column mb-30 align-start">
-            <Typography
-              variant="h5"
-              className="titles__info-contact text-white"
-            >
+      <Box className="section__container d-flex w-100" sx={contactLayout}>
+        <div className="flex-1 d-flex flex-column mb-30">
+          <div className="d-flex flex-column align-start">
+            <Typography className="font-bolder text-grey" sx={subtitles}>
               {spanishConstants.contactTitle.address}
             </Typography>
             <IconButton
@@ -48,13 +45,11 @@ const Contact = ({ id }: IListItems) => {
               className="d-flex p-left-0 justify-start"
               disableRipple
             >
-              <HomeIcon className="contact__icons" />
-              <Typography className="titles__info-contact text-grey">
-                {addressData.value}
-              </Typography>
+              <HomeIcon className="mr-15 text-green" />
+              <Typography className="text-grey">{addressData.value}</Typography>
             </IconButton>
           </div>
-          <div className="emai-phone__container">
+          <div className="d-flex flex-column align-start mb-30">
             <IconButton
               aria-label={mailContact.value}
               href={mailContact.link}
@@ -62,7 +57,7 @@ const Contact = ({ id }: IListItems) => {
               className="d-flex p-left-0"
               disableRipple
             >
-              <EmailIcon className="contact__icons" />
+              <EmailIcon className="mr-15 text-green" />
               <Typography className="text-grey">
                 colaneri.gaston@hotmail.com
               </Typography>
@@ -74,15 +69,12 @@ const Contact = ({ id }: IListItems) => {
               className="d-flex p-left-0"
               disableRipple
             >
-              <PhoneIphoneIcon className="contact__icons" />
+              <PhoneIphoneIcon className="mr-15 text-green" />
               <Typography className="text-grey">+34 722 185276</Typography>
             </IconButton>
           </div>
-          <div className="newtork__container">
-            <Typography
-              variant="h5"
-              className="titles__info-contact text-white"
-            >
+          <div>
+            <Typography className="text-grey font-bolder" sx={subtitles}>
               {spanishConstants.contactTitle.networks}
             </Typography>
             <div className="d-flex">
@@ -93,7 +85,7 @@ const Contact = ({ id }: IListItems) => {
                 disableRipple
                 className="p-left-0"
               >
-                <LinkedInIcon className="network__icons" />
+                <LinkedInIcon className="mr-15 text-grey" />
               </IconButton>
               <IconButton
                 aria-label={socialNetwork.github}
@@ -102,7 +94,7 @@ const Contact = ({ id }: IListItems) => {
                 disableRipple
                 className="p-left-0"
               >
-                <GitHubIcon className="network__icons" />
+                <GitHubIcon className="mr-15 text-grey" />
               </IconButton>
             </div>
           </div>

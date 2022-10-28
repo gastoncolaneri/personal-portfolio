@@ -13,37 +13,17 @@
 
 .text__container {
   position: absolute;
-  background-color: var(--BACKGROUND-3);
-  padding: 50px;
-  border-radius: 8px;
+  padding: 40px;
   color: var(--TEXT-4);
-}
-.text {
-  color: var(--TEXT-4);
-  opacity: 1;
-  font-weight: 200 !important;
+  text-align: center;
 }
 
-.typewritter__container {
-  display: flex;
-  /*This part is important for centering*/
+.Typewriter {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-.typewritter__text {
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+.home__text {
+  font-size: 2rem;
+  font-weight: 600;
 }

@@ -50,25 +50,25 @@ const DialogProject = ({ data, isOpen, setIsOpen }: IDialogProject) => {
       onClose={handleClose}
       open={isOpen}
       maxWidth="xl"
-      className="dialog__container"
+      className="d-flex justify-center "
     >
-      <DialogTitle className="project__dialog dialog-title__container">
+      <DialogTitle className="project__dialog dialog-title__container font-bolder">
         <div className="dialog__title">{data?.name}</div>
         <IconButton
           aria-label="close"
           onClick={handleClose}
-          className="dialog__button"
+          className="text-grey flex-1"
         >
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent className="project__dialog dialog__content">
+      <DialogContent className="project__dialog d-flex">
         <div className="image-dialog__container">
           <img
             alt={data?.name}
             loading="lazy"
             src={data?.image[indexImg]}
-            className="dialog__image"
+            className="w-100"
           />
           <IconButton
             aria-label="change-left"
@@ -85,8 +85,8 @@ const DialogProject = ({ data, isOpen, setIsOpen }: IDialogProject) => {
             <ChevronRightIcon />
           </IconButton>
         </div>
-        <div className="info__dialog">
-          <div className="project-info__container">
+        <div className="flex-1">
+          <div className="mb-30">
             <Typography className="section__title">
               {spanishConstants.modalTitles.projectInfo}
             </Typography>

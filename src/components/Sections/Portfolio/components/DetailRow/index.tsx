@@ -14,8 +14,10 @@ const DetailRow = ({ title, data }: IDetailRow) => {
 
   return (
     <>
-      <div className="row__container">
-        <Typography className="row__title">{title}: </Typography>
+      <div className="d-flex align-end">
+        <Typography className="text-white mr-10 font-bolder">
+          {title}:{" "}
+        </Typography>
         <Typography className="row__data">
           {isLink ? (
             <Tooltip

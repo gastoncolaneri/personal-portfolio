@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import Navbar from "components/Navbar";
-import CollapseNavbar from "components/Navbar/CollapseNavbar/CollapseNavbar";
 import {
   AboutMe,
   Contact,
@@ -9,7 +8,7 @@ import {
   Resume,
   Footer,
 } from "components/Sections";
-import { collapseNavbarLayout, navbarLayout } from "utils/constants";
+import { navbarLayout } from "utils/constants";
 
 import "./mainPage.css";
 
@@ -18,9 +17,6 @@ const MainPage = () => {
     <Box className="main__container">
       <Box className="left__block" sx={navbarLayout}>
         <Navbar customClassname="avatar__navbar" />
-      </Box>
-      <Box sx={collapseNavbarLayout}>
-        <CollapseNavbar />
       </Box>
 
       <Box className="right__block">

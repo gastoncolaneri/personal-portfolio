@@ -1,36 +1,4 @@
-.contact__container {
-  display: flex;
-  width: 100%;
-}
-
-.info-contact__container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
-
-.emai-phone__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 30px;
-}
-
-.contact__icons {
-  margin-right: 15px;
-  color: var(--AQUA-GREEN-1);
-}
-.network__icons {
-  margin-right: 15px;
-  color: var(--TEXT-5);
-}
 .network__icons:hover {
   color: var(--AQUA-GREEN-1);
   transition: 0.5s;
-}
-
-.titles__info-contact {
-  font-size: 20px;
-  color: var(--TEXT-4) !important;
 }

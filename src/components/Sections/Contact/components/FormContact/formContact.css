@@ -4,10 +4,6 @@
   flex-direction: column;
 }
 
-.form-contact__button {
-  color: var(--TEXT-4);
-}
-
 .name__input {
   flex: 1;
   border-radius: 5px;

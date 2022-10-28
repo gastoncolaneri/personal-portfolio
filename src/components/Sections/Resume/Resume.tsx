@@ -16,7 +16,7 @@ const Resume = ({ id }: IListItems) => {
         fadedTitle={spanishData?.navList[2].title}
         title={spanishData?.subNavList[1]}
       />
-      <div className="resume__container section__container">
+      <div className="d-flex flex-column section__container">
         <Box className="d-flex space-between" sx={sectionsLayout}>
           <CardList title="Experiencia laboral" data={spanishData?.jobs} />
           <CardList title="Educación" data={spanishData?.education} />
